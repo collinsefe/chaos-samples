@@ -1,0 +1,40 @@
+{
+    "title": "create-a-policy",
+    "description": "chaos toolkit is used to create an IAM policy",
+    "tags": [],
+    "steady-state-hypothesis": {
+        "title": "IAM policies in approved state",
+        "probes": []
+    },
+    "configuration": {
+        "aws_region": "eu-west-2",
+        "aws_profile_name": "default"
+        },  
+       "method": [
+                {
+                    "name": "create-a-new-policy",
+                    "type": "probe",
+                    "provider": {
+                        "type": "python",
+                        "module": "chaosaws.iam.actions",
+                        "func": "create_policy",
+                        "arguments": {
+                            "name": "newer-chaos-policy-for-collins",
+                            "path": "/corighose/collinsefe/",
+                            "policy": {
+                                "Version": "2012-10-17",
+                                "Statement": [
+                                    {
+                                        "Effect": "Allow",
+                                        "Action": [
+                                            "s3:ListAllMyBuckets",
+                                            "s3:GetBucketLocation"
+                                        ],
+                                        "Resource": "arn:aws:s3:::*"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                } ]
+}
