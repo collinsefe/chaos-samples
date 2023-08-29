@@ -1,0 +1,87 @@
+{
+  "chaoslib-version": "1.38.0",
+  "platform": "macOS-10.16-x86_64-i386-64bit",
+  "node": "Collinss-MBP-2",
+  "experiment": {
+    "title": "create SSM document",
+    "description": "chaos toolkit is used to create an SSM doc",
+    "tags": [],
+    "steady-state-hypothesis": {
+      "title": "SSM documents in order",
+      "probes": []
+    },
+    "configuration": {
+      "aws_region": "eu-west-2",
+      "aws_profile_name": "default"
+    },
+    "method": [
+      {
+        "name": "create-document",
+        "type": "action",
+        "provider": {
+          "type": "python",
+          "module": "chaosaws.ssm.actions",
+          "func": "create_document",
+          "arguments": {
+            "path_content": "./test-doc.csv",
+            "name": "chaos-ssm-doc",
+            "version_name": "",
+            "document_type": "",
+            "document_format": ""
+          }
+        }
+      }
+    ],
+    "dry": null
+  },
+  "start": "2023-08-29T14:35:45.622217",
+  "status": "completed",
+  "deviated": false,
+  "steady_states": {
+    "before": null,
+    "after": null,
+    "during": []
+  },
+  "run": [
+    {
+      "activity": {
+        "name": "create-document",
+        "type": "action",
+        "provider": {
+          "type": "python",
+          "module": "chaosaws.ssm.actions",
+          "func": "create_document",
+          "arguments": {
+            "path_content": "./test-doc.csv",
+            "name": "chaos-ssm-doc",
+            "version_name": "",
+            "document_type": "",
+            "document_format": ""
+          }
+        }
+      },
+      "output": null,
+      "start": "2023-08-29T14:35:45.623092",
+      "status": "failed",
+      "exception": [
+        "Traceback (most recent call last):\n",
+        "  File \"/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py\", line 39, in create_document\n    return client.create_document(\n           ^^^^^^^^^^^^^^^^^^^^^^^\n",
+        "  File \"/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py\", line 530, in _api_call\n    return self._make_api_call(operation_name, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+        "  File \"/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py\", line 960, in _make_api_call\n    raise error_class(parsed_response, operation_name)\n",
+        "botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the CreateDocument operation: 3 validation errors detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType; Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\\-.]{1,128}$; Value at 'documentFormat' failed to satisfy constraint: Member must satisfy enum value set: [YAML, JSON, TEXT]\n",
+        "\nDuring handling of the above exception, another exception occurred:\n\n",
+        "Traceback (most recent call last):\n",
+        "  File \"/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py\", line 56, in run_python_activity\n    return func(**arguments)\n           ^^^^^^^^^^^^^^^^^\n",
+        "  File \"/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py\", line 47, in create_document\n    raise ActivityFailed(\n",
+        "chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '3 validation errors detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType; Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\\-.]{1,128}$; Value at 'documentFormat' failed to satisfy constraint: Member must satisfy enum value set: [YAML, JSON, TEXT]'\n",
+        "\nDuring handling of the above exception, another exception occurred:\n\n",
+        "chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '3 validation errors detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType; Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\\-.]{1,128}$; Value at 'documentFormat' failed to satisfy constraint: Member must satisfy enum value set: [YAML, JSON, TEXT]'\n"
+      ],
+      "end": "2023-08-29T14:35:46.871407",
+      "duration": 1.248315
+    }
+  ],
+  "rollbacks": [],
+  "end": "2023-08-29T14:35:46.872020",
+  "duration": 1.2684962749481201
+}

@@ -1,0 +1,32 @@
+{
+    "title": "create SSM document",
+    "description": "chaos toolkit is used to create an SSM doc",
+    "tags": [],
+    "steady-state-hypothesis": {
+        "title": "SSM documents in order",
+        "probes": []
+    },
+    "configuration": {
+        "aws_region": "eu-west-2",
+        "aws_profile_name": "default"
+        },  
+       "method": [
+                    {
+                        "name": "create-document",
+                        "type": "action",
+                        "provider": {
+                        "type": "python",
+                        "module": "chaosaws.ssm.actions",
+                        "func": "create_document",
+                        "arguments": {
+                            "path_content": "./test-doc.csv",
+                            "name": "chaos-ssm-doc",
+                            "version_name": "",
+                            "document_type": "",
+                            "document_format": ""
+                        }
+                        }
+                    }
+                    ]
+                }
+                
