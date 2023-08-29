@@ -1,0 +1,18 @@
+[36m[2023-08-29 10:52:45 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-29 10:52:45 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-29 10:52:45 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-29 10:52:46 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-29 10:52:46 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-29 10:52:46 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-29 11:42:42 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-29 11:42:42 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-29 11:42:42 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-29 11:42:42 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-29 11:42:42 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-29 11:42:42 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-29 11:42:42 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-29 11:42:42 DEBUG] [caching:35][39m Cached 0 activities
+[32m[2023-08-29 11:42:42 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-29 11:42:42 DEBUG] [caching:42][39m Clearing activities cache
+[31m[2023-08-29 11:42:42 ERROR] [cli:278][39m experiment requires a title
+[36m[2023-08-29 11:42:42 DEBUG] [cli:279][39m experiment requires a title
