@@ -1,592 +1,101 @@
-[36m[2023-08-29 11:43:46 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 11:43:46 DEBUG] [cli:115][39m Running command 'init'
-[36m[2023-08-29 11:43:46 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 11:43:46 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 11:45:48 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 11:45:48 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 11:45:48 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 11:45:48 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 11:45:48 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 11:45:48 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 11:46:28 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 11:46:28 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 11:46:28 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 11:46:29 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 11:46:29 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 11:46:29 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 11:46:45 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 11:46:45 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 11:46:45 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 11:46:45 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 11:46:45 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 11:46:45 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 11:49:51 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 11:49:51 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 11:49:51 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 11:49:52 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 11:49:52 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 11:49:52 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 11:54:19 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 11:54:19 DEBUG] [cli:115][39m Running command 'validate'
-[36m[2023-08-29 11:54:19 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 11:54:19 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 11:54:19 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 11:54:19 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 11:54:19 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 11:54:19 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 11:54:19 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 11:54:19 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 11:54:19 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 11:54:19 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 11:54:19 DEBUG] [caching:42][39m Clearing activities cache
-[31m[2023-08-29 11:54:19 ERROR] [cli:377][39m an activity must have a type
-[36m[2023-08-29 11:54:19 DEBUG] [cli:378][39m an activity must have a type
-[36m[2023-08-29 12:11:12 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 12:11:12 DEBUG] [cli:115][39m Running command 'validate'
-[36m[2023-08-29 12:11:12 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 12:11:13 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 12:11:13 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:11:13 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:11:13 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:11:13 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 12:11:13 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 12:11:13 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:11:13 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:11:13 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 12:11:13 DEBUG] [caching:42][39m Clearing activities cache
-[31m[2023-08-29 12:11:13 ERROR] [cli:377][39m could not find Python module 'chaosaws.iam.actions' in activity 'create-a-new-policy'
-[36m[2023-08-29 12:11:13 DEBUG] [cli:378][39m could not find Python module 'chaosaws.iam.actions' in activity 'create-a-new-policy'
-[36m[2023-08-29 12:13:20 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 12:13:20 DEBUG] [cli:115][39m Running command 'validate'
-[36m[2023-08-29 12:13:20 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 12:13:20 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 12:13:20 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:13:20 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:13:20 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:13:20 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 12:13:20 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 12:13:20 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:13:20 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:13:20 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 12:13:20 DEBUG] [caching:42][39m Clearing activities cache
-[31m[2023-08-29 12:13:20 ERROR] [cli:377][39m could not find Python module 'chaosaws.iam.actions' in activity 'create-a-new-policy'
-[36m[2023-08-29 12:13:20 DEBUG] [cli:378][39m could not find Python module 'chaosaws.iam.actions' in activity 'create-a-new-policy'
-[36m[2023-08-29 12:13:59 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 12:13:59 DEBUG] [cli:115][39m Running command 'validate'
-[36m[2023-08-29 12:13:59 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 12:13:59 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 12:13:59 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:13:59 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:13:59 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:13:59 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 12:13:59 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 12:13:59 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:13:59 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:13:59 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 12:13:59 DEBUG] [caching:42][39m Clearing activities cache
-[31m[2023-08-29 12:13:59 ERROR] [cli:377][39m 'probes' is not a supported activity type
-[36m[2023-08-29 12:13:59 DEBUG] [cli:378][39m 'probes' is not a supported activity type
-[36m[2023-08-29 12:14:08 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 12:14:08 DEBUG] [cli:115][39m Running command 'validate'
-[36m[2023-08-29 12:14:08 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 12:14:08 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 12:14:08 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:14:08 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:14:08 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:14:08 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 12:14:08 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 12:14:08 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:14:08 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:14:08 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 12:14:08 DEBUG] [caching:42][39m Clearing activities cache
-[31m[2023-08-29 12:14:08 ERROR] [cli:377][39m could not find Python module 'chaosaws.iam.actions' in activity 'create-a-new-policy'
-[36m[2023-08-29 12:14:08 DEBUG] [cli:378][39m could not find Python module 'chaosaws.iam.actions' in activity 'create-a-new-policy'
-[36m[2023-08-29 12:14:22 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 12:14:22 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 12:14:22 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 12:14:22 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 12:14:22 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:14:22 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:14:22 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:14:22 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 12:14:22 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 12:14:22 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:14:22 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:14:22 DEBUG] [secret:103][39m Done loading secrets
-[32m[2023-08-29 12:14:22 INFO] [experiment:109][39m Experiment looks valid
-[36m[2023-08-29 12:14:22 DEBUG] [caching:42][39m Clearing activities cache
-[36m[2023-08-29 12:14:22 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
-[36m[2023-08-29 12:14:22 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:14:22 DEBUG] [caching:35][39m Cached 1 activities
-[36m[2023-08-29 12:14:22 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:14:22 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:14:22 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 12:14:22 DEBUG] [configuration:160][39m Loading dynamic configuration...
-[32m[2023-08-29 12:14:22 INFO] [run:369][39m Running experiment: create-a-policy
-[36m[2023-08-29 12:14:22 DEBUG] [__init__:64][39m Initializing controls
-[32m[2023-08-29 12:14:22 INFO] [run:396][39m Steady-state strategy: default
-[32m[2023-08-29 12:14:22 INFO] [run:400][39m Rollbacks strategy: default
-[32m[2023-08-29 12:14:22 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
-[36m[2023-08-29 12:14:22 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
-[32m[2023-08-29 12:14:22 INFO] [run:684][39m Playing your experiment's method now...
-[36m[2023-08-29 12:14:22 DEBUG] [__init__:450][39m No controls to apply on 'method'
-[36m[2023-08-29 12:14:22 DEBUG] [__init__:450][39m No controls to apply on 'activity'
-[32m[2023-08-29 12:14:22 INFO] [activity:215][39m Probe: create-a-new-policy
-[36m[2023-08-29 12:14:22 DEBUG] [python:33][39m Activity 'create-a-new-policy' loaded from '/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaosaws/iam/actions.py'
-[36m[2023-08-29 12:14:22 DEBUG] [__init__:67][39m The configuration key `aws_region` is not set, looking in the environment instead for `AWS_REGION` or `AWS_DEFAULT_REGION`
-[36m[2023-08-29 12:14:22 DEBUG] [activity:294][39m Activity failed
+[36m[2023-08-31 09:34:29 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 09:34:29 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 09:34:29 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 09:34:30 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 09:34:30 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 09:34:30 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 09:34:30 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 09:34:30 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 09:34:30 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 09:34:30 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 09:34:30 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 09:34:30 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 09:34:30 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 09:34:30 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 09:34:30 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 09:34:30 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 09:34:30 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 09:34:30 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 09:34:30 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 09:34:30 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 09:34:30 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 09:34:30 INFO] [run:369][39m Running experiment: attach-a-policy
+[36m[2023-08-31 09:34:30 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 09:34:30 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 09:34:30 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 09:34:30 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 09:34:30 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 09:34:30 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 09:34:30 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 09:34:30 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 09:34:30 INFO] [activity:215][39m Probe: attach-role-policy
+[36m[2023-08-31 09:34:30 DEBUG] [python:33][39m Activity 'attach-role-policy' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/iam/actions.py'
+[36m[2023-08-31 09:34:30 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 09:34:30 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 09:34:32 DEBUG] [activity:237][39m   => succeeded with '{'ResponseMetadata': {'RequestId': 'a1648e11-9ebd-4ddd-8f65-ff9f6b17862c', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': 'a1648e11-9ebd-4ddd-8f65-ff9f6b17862c', 'content-type': 'text/xml', 'content-length': '212', 'date': 'Thu, 31 Aug 2023 08:34:31 GMT'}, 'RetryAttempts': 0}}'
+[36m[2023-08-31 09:34:32 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 09:34:32 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 09:34:32 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 09:34:32 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 09:34:32 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 09:34:32 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 09:34:32 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 09:34:32 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 09:34:32 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 09:34:32 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 09:35:37 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 09:35:37 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 09:35:37 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 09:35:38 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 09:35:38 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 09:35:38 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[31m[2023-08-31 09:35:38 ERROR] [cli:268][39m Path "attach-policy.jsonclear" does not exist.
+[36m[2023-08-31 09:35:38 DEBUG] [cli:269][39m Path "attach-policy.jsonclear" does not exist.
+[36m[2023-08-31 09:39:01 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 09:39:01 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 09:39:01 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 09:39:02 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 09:39:02 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 09:39:02 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 09:39:02 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 09:39:02 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 09:39:02 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 09:39:02 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 09:39:02 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 09:39:02 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 09:39:02 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 09:39:02 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 09:39:02 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 09:39:02 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 09:39:02 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 09:39:02 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 09:39:02 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 09:39:02 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 09:39:02 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 09:39:02 INFO] [run:369][39m Running experiment: create-a-policy
+[36m[2023-08-31 09:39:02 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 09:39:02 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 09:39:02 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 09:39:02 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 09:39:02 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 09:39:02 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 09:39:02 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 09:39:02 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 09:39:02 INFO] [activity:215][39m Probe: create-a-new-policy
+[36m[2023-08-31 09:39:02 DEBUG] [python:33][39m Activity 'create-a-new-policy' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/iam/actions.py'
+[36m[2023-08-31 09:39:02 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 09:39:02 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 09:39:03 DEBUG] [activity:294][39m Activity failed
     Traceback (most recent call last):
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
-        return func(**arguments)
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaosaws/iam/actions.py", line 24, in create_policy
-        client = aws_client("iam", configuration, secrets)
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaosaws/__init__.py", line 73, in aws_client
-        raise InterruptExecution("AWS requires a region to be set!")
-    chaoslib.exceptions.InterruptExecution: AWS requires a region to be set!
-    
-    During handling of the above exception, another exception occurred:
-    
-    Traceback (most recent call last):
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaoslib/activity.py", line 287, in run_activity
-        result = run_python_activity(activity, configuration, secrets)
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
-        raise ActivityFailed(
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
-        return func(**arguments)
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaosaws/iam/actions.py", line 24, in create_policy
-        client = aws_client("iam", configuration, secrets)
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaosaws/__init__.py", line 73, in aws_client
-        raise InterruptExecution("AWS requires a region to be set!")
-    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.InterruptExecution: AWS requires a region to be set!
-[31m[2023-08-29 12:14:22 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.InterruptExecution: AWS requires a region to be set!
-[36m[2023-08-29 12:14:22 DEBUG] [__init__:450][39m No controls to apply on 'activity'
-[36m[2023-08-29 12:14:22 DEBUG] [__init__:450][39m No controls to apply on 'method'
-[32m[2023-08-29 12:14:22 INFO] [run:964][39m Let's rollback...
-[36m[2023-08-29 12:14:22 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
-[32m[2023-08-29 12:14:22 INFO] [rollback:31][39m No declared rollbacks, let's move on.
-[36m[2023-08-29 12:14:22 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
-[32m[2023-08-29 12:14:22 INFO] [run:515][39m Experiment ended with status: completed
-[36m[2023-08-29 12:14:22 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
-[36m[2023-08-29 12:14:22 DEBUG] [__init__:103][39m Cleaning up controls
-[36m[2023-08-29 12:14:22 DEBUG] [caching:42][39m Clearing activities cache
-[36m[2023-08-29 12:15:16 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 12:15:16 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 12:15:16 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 12:15:16 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 12:15:16 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:15:16 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:15:16 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:15:16 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 12:15:16 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 12:15:16 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:15:16 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:15:16 DEBUG] [secret:103][39m Done loading secrets
-[32m[2023-08-29 12:15:16 INFO] [experiment:109][39m Experiment looks valid
-[36m[2023-08-29 12:15:16 DEBUG] [caching:42][39m Clearing activities cache
-[36m[2023-08-29 12:15:16 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
-[36m[2023-08-29 12:15:16 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:15:16 DEBUG] [caching:35][39m Cached 1 activities
-[36m[2023-08-29 12:15:16 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:15:16 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:15:16 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 12:15:16 DEBUG] [configuration:160][39m Loading dynamic configuration...
-[32m[2023-08-29 12:15:16 INFO] [run:369][39m Running experiment: create-a-policy
-[36m[2023-08-29 12:15:16 DEBUG] [__init__:64][39m Initializing controls
-[32m[2023-08-29 12:15:16 INFO] [run:396][39m Steady-state strategy: default
-[32m[2023-08-29 12:15:16 INFO] [run:400][39m Rollbacks strategy: default
-[32m[2023-08-29 12:15:16 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
-[36m[2023-08-29 12:15:16 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
-[32m[2023-08-29 12:15:16 INFO] [run:684][39m Playing your experiment's method now...
-[36m[2023-08-29 12:15:16 DEBUG] [__init__:450][39m No controls to apply on 'method'
-[36m[2023-08-29 12:15:16 DEBUG] [__init__:450][39m No controls to apply on 'activity'
-[32m[2023-08-29 12:15:16 INFO] [activity:215][39m Probe: create-a-new-policy
-[36m[2023-08-29 12:15:16 DEBUG] [python:33][39m Activity 'create-a-new-policy' loaded from '/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaosaws/iam/actions.py'
-[36m[2023-08-29 12:15:16 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
-[36m[2023-08-29 12:15:16 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
-[36m[2023-08-29 12:15:20 DEBUG] [activity:294][39m Activity failed
-    Traceback (most recent call last):
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaosaws/iam/actions.py", line 27, in create_policy
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/iam/actions.py", line 27, in create_policy
         return client.create_policy(
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/botocore/client.py", line 535, in _api_call
-        return self._make_api_call(operation_name, kwargs)
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/botocore/client.py", line 980, in _make_api_call
-        raise error_class(parsed_response, operation_name)
-    botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the CreatePolicy operation: The specified value for path is invalid. It must begin and end with / and contain only alphanumeric characters and/or / characters.
-    
-    During handling of the above exception, another exception occurred:
-    
-    Traceback (most recent call last):
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
-        return func(**arguments)
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaosaws/iam/actions.py", line 34, in create_policy
-        raise FailedActivity(f"failed creating a policy: {str(x)}")
-    chaoslib.exceptions.ActivityFailed: failed creating a policy: An error occurred (ValidationError) when calling the CreatePolicy operation: The specified value for path is invalid. It must begin and end with / and contain only alphanumeric characters and/or / characters.
-    
-    During handling of the above exception, another exception occurred:
-    
-    Traceback (most recent call last):
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaoslib/activity.py", line 287, in run_activity
-        result = run_python_activity(activity, configuration, secrets)
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
-        raise ActivityFailed(
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
-        return func(**arguments)
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaosaws/iam/actions.py", line 34, in create_policy
-        raise FailedActivity(f"failed creating a policy: {str(x)}")
-    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: failed creating a policy: An error occurred (ValidationError) when calling the CreatePolicy operation: The specified value for path is invalid. It must begin and end with / and contain only alphanumeric characters and/or / characters.
-[31m[2023-08-29 12:15:20 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: failed creating a policy: An error occurred (ValidationError) when calling the CreatePolicy operation: The specified value for path is invalid. It must begin and end with / and contain only alphanumeric characters and/or / characters.
-[36m[2023-08-29 12:15:20 DEBUG] [__init__:450][39m No controls to apply on 'activity'
-[36m[2023-08-29 12:15:20 DEBUG] [__init__:450][39m No controls to apply on 'method'
-[32m[2023-08-29 12:15:20 INFO] [run:964][39m Let's rollback...
-[36m[2023-08-29 12:15:20 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
-[32m[2023-08-29 12:15:20 INFO] [rollback:31][39m No declared rollbacks, let's move on.
-[36m[2023-08-29 12:15:20 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
-[32m[2023-08-29 12:15:20 INFO] [run:515][39m Experiment ended with status: completed
-[36m[2023-08-29 12:15:20 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
-[36m[2023-08-29 12:15:20 DEBUG] [__init__:103][39m Cleaning up controls
-[36m[2023-08-29 12:15:20 DEBUG] [caching:42][39m Clearing activities cache
-[36m[2023-08-29 12:16:54 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 12:16:54 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 12:16:54 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 12:16:55 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 12:16:55 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:16:55 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:16:55 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:16:55 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 12:16:55 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 12:16:55 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:16:55 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:16:55 DEBUG] [secret:103][39m Done loading secrets
-[32m[2023-08-29 12:16:55 INFO] [experiment:109][39m Experiment looks valid
-[36m[2023-08-29 12:16:55 DEBUG] [caching:42][39m Clearing activities cache
-[36m[2023-08-29 12:16:55 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
-[36m[2023-08-29 12:16:55 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:16:55 DEBUG] [caching:35][39m Cached 1 activities
-[36m[2023-08-29 12:16:55 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:16:55 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:16:55 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 12:16:55 DEBUG] [configuration:160][39m Loading dynamic configuration...
-[32m[2023-08-29 12:16:55 INFO] [run:369][39m Running experiment: create-a-policy
-[36m[2023-08-29 12:16:55 DEBUG] [__init__:64][39m Initializing controls
-[32m[2023-08-29 12:16:55 INFO] [run:396][39m Steady-state strategy: default
-[32m[2023-08-29 12:16:55 INFO] [run:400][39m Rollbacks strategy: default
-[32m[2023-08-29 12:16:55 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
-[36m[2023-08-29 12:16:55 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
-[32m[2023-08-29 12:16:55 INFO] [run:684][39m Playing your experiment's method now...
-[36m[2023-08-29 12:16:55 DEBUG] [__init__:450][39m No controls to apply on 'method'
-[36m[2023-08-29 12:16:55 DEBUG] [__init__:450][39m No controls to apply on 'activity'
-[32m[2023-08-29 12:16:55 INFO] [activity:215][39m Probe: create-a-new-policy
-[36m[2023-08-29 12:16:55 DEBUG] [python:33][39m Activity 'create-a-new-policy' loaded from '/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaosaws/iam/actions.py'
-[36m[2023-08-29 12:16:55 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
-[36m[2023-08-29 12:16:55 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
-[36m[2023-08-29 12:17:03 DEBUG] [activity:294][39m Activity failed
-    Traceback (most recent call last):
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaosaws/iam/actions.py", line 27, in create_policy
-        return client.create_policy(
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/botocore/client.py", line 535, in _api_call
-        return self._make_api_call(operation_name, kwargs)
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/botocore/client.py", line 980, in _make_api_call
-        raise error_class(parsed_response, operation_name)
-    botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the CreatePolicy operation: The specified value for path is invalid. It must begin and end with / and contain only alphanumeric characters and/or / characters.
-    
-    During handling of the above exception, another exception occurred:
-    
-    Traceback (most recent call last):
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
-        return func(**arguments)
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaosaws/iam/actions.py", line 34, in create_policy
-        raise FailedActivity(f"failed creating a policy: {str(x)}")
-    chaoslib.exceptions.ActivityFailed: failed creating a policy: An error occurred (ValidationError) when calling the CreatePolicy operation: The specified value for path is invalid. It must begin and end with / and contain only alphanumeric characters and/or / characters.
-    
-    During handling of the above exception, another exception occurred:
-    
-    Traceback (most recent call last):
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaoslib/activity.py", line 287, in run_activity
-        result = run_python_activity(activity, configuration, secrets)
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
-        raise ActivityFailed(
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
-        return func(**arguments)
-      File "/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaosaws/iam/actions.py", line 34, in create_policy
-        raise FailedActivity(f"failed creating a policy: {str(x)}")
-    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: failed creating a policy: An error occurred (ValidationError) when calling the CreatePolicy operation: The specified value for path is invalid. It must begin and end with / and contain only alphanumeric characters and/or / characters.
-[31m[2023-08-29 12:17:03 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: failed creating a policy: An error occurred (ValidationError) when calling the CreatePolicy operation: The specified value for path is invalid. It must begin and end with / and contain only alphanumeric characters and/or / characters.
-[36m[2023-08-29 12:17:03 DEBUG] [__init__:450][39m No controls to apply on 'activity'
-[36m[2023-08-29 12:17:03 DEBUG] [__init__:450][39m No controls to apply on 'method'
-[32m[2023-08-29 12:17:03 INFO] [run:964][39m Let's rollback...
-[36m[2023-08-29 12:17:03 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
-[32m[2023-08-29 12:17:03 INFO] [rollback:31][39m No declared rollbacks, let's move on.
-[36m[2023-08-29 12:17:03 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
-[32m[2023-08-29 12:17:03 INFO] [run:515][39m Experiment ended with status: completed
-[36m[2023-08-29 12:17:03 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
-[36m[2023-08-29 12:17:03 DEBUG] [__init__:103][39m Cleaning up controls
-[36m[2023-08-29 12:17:03 DEBUG] [caching:42][39m Clearing activities cache
-[36m[2023-08-29 12:23:04 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 12:23:04 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 12:23:04 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 12:23:04 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 12:23:04 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:23:04 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:23:04 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:23:04 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 12:23:04 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 12:23:04 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:23:04 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:23:04 DEBUG] [secret:103][39m Done loading secrets
-[32m[2023-08-29 12:23:04 INFO] [experiment:109][39m Experiment looks valid
-[36m[2023-08-29 12:23:04 DEBUG] [caching:42][39m Clearing activities cache
-[36m[2023-08-29 12:23:04 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
-[36m[2023-08-29 12:23:04 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:23:04 DEBUG] [caching:35][39m Cached 1 activities
-[36m[2023-08-29 12:23:04 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:23:04 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:23:04 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 12:23:04 DEBUG] [configuration:160][39m Loading dynamic configuration...
-[32m[2023-08-29 12:23:04 INFO] [run:369][39m Running experiment: create-a-policy
-[36m[2023-08-29 12:23:04 DEBUG] [__init__:64][39m Initializing controls
-[32m[2023-08-29 12:23:04 INFO] [run:396][39m Steady-state strategy: default
-[32m[2023-08-29 12:23:04 INFO] [run:400][39m Rollbacks strategy: default
-[32m[2023-08-29 12:23:04 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
-[36m[2023-08-29 12:23:04 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
-[32m[2023-08-29 12:23:04 INFO] [run:684][39m Playing your experiment's method now...
-[36m[2023-08-29 12:23:04 DEBUG] [__init__:450][39m No controls to apply on 'method'
-[36m[2023-08-29 12:23:04 DEBUG] [__init__:450][39m No controls to apply on 'activity'
-[32m[2023-08-29 12:23:04 INFO] [activity:215][39m Probe: create-a-new-policy
-[36m[2023-08-29 12:23:04 DEBUG] [python:33][39m Activity 'create-a-new-policy' loaded from '/Users/collinsorighose/.venvs/chaostk/lib/python3.9/site-packages/chaosaws/iam/actions.py'
-[36m[2023-08-29 12:23:04 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
-[36m[2023-08-29 12:23:04 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
-[36m[2023-08-29 12:23:06 DEBUG] [activity:237][39m   => succeeded with '{'Policy': {'PolicyName': 'chaos-policy-for-collins', 'PolicyId': 'ANPAZ6VZFIT5NIVLUPZ6L', 'Arn': 'arn:aws:iam::684361860346:policy/user/Jane/chaos-policy-for-collins', 'Path': '/user/Jane/', 'DefaultVersionId': 'v1', 'AttachmentCount': 0, 'PermissionsBoundaryUsageCount': 0, 'IsAttachable': True, 'CreateDate': datetime.datetime(2023, 8, 29, 11, 23, 6, tzinfo=tzutc()), 'UpdateDate': datetime.datetime(2023, 8, 29, 11, 23, 6, tzinfo=tzutc())}, 'ResponseMetadata': {'RequestId': 'c0abae2b-6b35-4360-9436-cfdada1ad439', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': 'c0abae2b-6b35-4360-9436-cfdada1ad439', 'content-type': 'text/xml', 'content-length': '803', 'date': 'Tue, 29 Aug 2023 11:23:05 GMT'}, 'RetryAttempts': 0}}'
-[36m[2023-08-29 12:23:06 DEBUG] [__init__:450][39m No controls to apply on 'activity'
-[36m[2023-08-29 12:23:06 DEBUG] [__init__:450][39m No controls to apply on 'method'
-[32m[2023-08-29 12:23:06 INFO] [run:964][39m Let's rollback...
-[36m[2023-08-29 12:23:06 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
-[32m[2023-08-29 12:23:06 INFO] [rollback:31][39m No declared rollbacks, let's move on.
-[36m[2023-08-29 12:23:06 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
-[32m[2023-08-29 12:23:06 INFO] [run:515][39m Experiment ended with status: completed
-[36m[2023-08-29 12:23:06 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
-[36m[2023-08-29 12:23:06 DEBUG] [__init__:103][39m Cleaning up controls
-[36m[2023-08-29 12:23:06 DEBUG] [caching:42][39m Clearing activities cache
-[36m[2023-08-29 12:25:21 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 12:25:21 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 12:25:21 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 12:25:22 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 12:25:22 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:25:22 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:44:18 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 12:44:18 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 12:44:18 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 12:44:18 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 12:44:18 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:44:18 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:46:09 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 12:46:09 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 12:46:09 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 12:46:09 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 12:46:09 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:46:09 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:46:26 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 12:46:26 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 12:46:26 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 12:46:27 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 12:46:27 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:46:27 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:46:27 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:46:27 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 12:46:27 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 12:46:27 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:46:27 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:46:27 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 12:46:27 DEBUG] [caching:42][39m Clearing activities cache
-[31m[2023-08-29 12:46:27 ERROR] [cli:278][39m could not find Python module 'chaosaws.iam.actions' in activity 'create-a-new-policy'
-[36m[2023-08-29 12:46:27 DEBUG] [cli:279][39m could not find Python module 'chaosaws.iam.actions' in activity 'create-a-new-policy'
-[36m[2023-08-29 12:47:35 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 12:47:35 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 12:47:35 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 12:47:35 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 12:47:35 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:47:35 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:47:35 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:47:35 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 12:47:35 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 12:47:35 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:47:35 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:47:35 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 12:47:35 DEBUG] [caching:42][39m Clearing activities cache
-[31m[2023-08-29 12:47:35 ERROR] [cli:278][39m could not find Python module 'chaosaws.iam.actions' in activity 'create-a-new-policy'
-[36m[2023-08-29 12:47:35 DEBUG] [cli:279][39m could not find Python module 'chaosaws.iam.actions' in activity 'create-a-new-policy'
-[36m[2023-08-29 12:48:18 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 12:48:18 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 12:48:18 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 12:48:18 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 12:48:18 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:48:18 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:48:18 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:48:18 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 12:48:18 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 12:48:18 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:48:18 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:48:18 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 12:48:18 DEBUG] [caching:42][39m Clearing activities cache
-[31m[2023-08-29 12:48:18 ERROR] [cli:278][39m could not find Python module 'chaosaws.iam.actions' in activity 'create-a-new-policy'
-[36m[2023-08-29 12:48:18 DEBUG] [cli:279][39m could not find Python module 'chaosaws.iam.actions' in activity 'create-a-new-policy'
-[36m[2023-08-29 12:48:46 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 12:48:46 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 12:48:46 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 12:48:47 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 12:48:47 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:48:47 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:48:47 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:48:47 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 12:48:47 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 12:48:47 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:48:47 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:48:47 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 12:48:47 DEBUG] [caching:42][39m Clearing activities cache
-[31m[2023-08-29 12:48:47 ERROR] [cli:278][39m could not find Python module 'chaosaws.iam.actions' in activity 'create-a-new-policy'
-[36m[2023-08-29 12:48:47 DEBUG] [cli:279][39m could not find Python module 'chaosaws.iam.actions' in activity 'create-a-new-policy'
-[36m[2023-08-29 12:55:27 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 12:55:27 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 12:55:27 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 12:55:27 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 12:55:27 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:55:27 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:55:27 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:55:27 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 12:55:27 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 12:55:27 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:55:27 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:55:27 DEBUG] [secret:103][39m Done loading secrets
-[32m[2023-08-29 12:55:27 INFO] [experiment:109][39m Experiment looks valid
-[36m[2023-08-29 12:55:27 DEBUG] [caching:42][39m Clearing activities cache
-[36m[2023-08-29 12:55:27 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
-[36m[2023-08-29 12:55:27 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:55:27 DEBUG] [caching:35][39m Cached 1 activities
-[36m[2023-08-29 12:55:27 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:55:27 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:55:27 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 12:55:27 DEBUG] [configuration:160][39m Loading dynamic configuration...
-[32m[2023-08-29 12:55:27 INFO] [run:369][39m Running experiment: create-a-policy
-[36m[2023-08-29 12:55:27 DEBUG] [__init__:64][39m Initializing controls
-[32m[2023-08-29 12:55:27 INFO] [run:396][39m Steady-state strategy: default
-[32m[2023-08-29 12:55:27 INFO] [run:400][39m Rollbacks strategy: default
-[32m[2023-08-29 12:55:27 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
-[36m[2023-08-29 12:55:27 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
-[32m[2023-08-29 12:55:27 INFO] [run:684][39m Playing your experiment's method now...
-[36m[2023-08-29 12:55:27 DEBUG] [__init__:450][39m No controls to apply on 'method'
-[36m[2023-08-29 12:55:27 DEBUG] [__init__:450][39m No controls to apply on 'activity'
-[32m[2023-08-29 12:55:27 INFO] [activity:215][39m Probe: create-a-new-policy
-[36m[2023-08-29 12:55:27 DEBUG] [python:33][39m Activity 'create-a-new-policy' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/iam/actions.py'
-[36m[2023-08-29 12:55:27 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
-[36m[2023-08-29 12:55:27 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
-[36m[2023-08-29 12:55:29 DEBUG] [activity:237][39m   => succeeded with '{'Policy': {'PolicyName': 'new-chaos-policy-for-collins', 'PolicyId': 'ANPAZ6VZFIT5PWRZCLO4L', 'Arn': 'arn:aws:iam::684361860346:policy/corighose/collinsefe/new-chaos-policy-for-collins', 'Path': '/corighose/collinsefe/', 'DefaultVersionId': 'v1', 'AttachmentCount': 0, 'PermissionsBoundaryUsageCount': 0, 'IsAttachable': True, 'CreateDate': datetime.datetime(2023, 8, 29, 11, 55, 29, tzinfo=tzutc()), 'UpdateDate': datetime.datetime(2023, 8, 29, 11, 55, 29, tzinfo=tzutc())}, 'ResponseMetadata': {'RequestId': '3df594b0-7d0e-48e7-8a01-8373ab1c13a9', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': '3df594b0-7d0e-48e7-8a01-8373ab1c13a9', 'content-type': 'text/xml', 'content-length': '833', 'date': 'Tue, 29 Aug 2023 11:55:28 GMT'}, 'RetryAttempts': 0}}'
-[36m[2023-08-29 12:55:29 DEBUG] [__init__:450][39m No controls to apply on 'activity'
-[36m[2023-08-29 12:55:29 DEBUG] [__init__:450][39m No controls to apply on 'method'
-[32m[2023-08-29 12:55:29 INFO] [run:964][39m Let's rollback...
-[36m[2023-08-29 12:55:29 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
-[32m[2023-08-29 12:55:29 INFO] [rollback:31][39m No declared rollbacks, let's move on.
-[36m[2023-08-29 12:55:29 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
-[32m[2023-08-29 12:55:29 INFO] [run:515][39m Experiment ended with status: completed
-[36m[2023-08-29 12:55:29 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
-[36m[2023-08-29 12:55:29 DEBUG] [__init__:103][39m Cleaning up controls
-[36m[2023-08-29 12:55:29 DEBUG] [caching:42][39m Clearing activities cache
-[36m[2023-08-29 12:57:21 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 12:57:21 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 12:57:21 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 12:57:21 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 12:57:21 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:57:21 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[31m[2023-08-29 12:57:21 ERROR] [cli:268][39m Path "experiment.json" does not exist.
-[36m[2023-08-29 12:57:21 DEBUG] [cli:269][39m Path "experiment.json" does not exist.
-[36m[2023-08-29 12:57:28 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 12:57:28 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 12:57:28 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 12:57:28 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 12:57:28 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:57:28 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 12:57:28 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:57:28 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 12:57:28 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 12:57:28 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:57:28 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:57:28 DEBUG] [secret:103][39m Done loading secrets
-[32m[2023-08-29 12:57:28 INFO] [experiment:109][39m Experiment looks valid
-[36m[2023-08-29 12:57:28 DEBUG] [caching:42][39m Clearing activities cache
-[36m[2023-08-29 12:57:28 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
-[36m[2023-08-29 12:57:28 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 12:57:28 DEBUG] [caching:35][39m Cached 1 activities
-[36m[2023-08-29 12:57:28 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 12:57:28 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 12:57:28 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 12:57:28 DEBUG] [configuration:160][39m Loading dynamic configuration...
-[32m[2023-08-29 12:57:28 INFO] [run:369][39m Running experiment: create-a-policy
-[36m[2023-08-29 12:57:28 DEBUG] [__init__:64][39m Initializing controls
-[32m[2023-08-29 12:57:28 INFO] [run:396][39m Steady-state strategy: default
-[32m[2023-08-29 12:57:28 INFO] [run:400][39m Rollbacks strategy: default
-[32m[2023-08-29 12:57:28 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
-[36m[2023-08-29 12:57:28 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
-[32m[2023-08-29 12:57:28 INFO] [run:684][39m Playing your experiment's method now...
-[36m[2023-08-29 12:57:28 DEBUG] [__init__:450][39m No controls to apply on 'method'
-[36m[2023-08-29 12:57:28 DEBUG] [__init__:450][39m No controls to apply on 'activity'
-[32m[2023-08-29 12:57:28 INFO] [activity:215][39m Probe: create-a-new-policy
-[36m[2023-08-29 12:57:28 DEBUG] [python:33][39m Activity 'create-a-new-policy' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/iam/actions.py'
-[36m[2023-08-29 12:57:28 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
-[36m[2023-08-29 12:57:28 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
-[36m[2023-08-29 12:57:30 DEBUG] [activity:237][39m   => succeeded with '{'Policy': {'PolicyName': 'newer-chaos-policy-for-collins', 'PolicyId': 'ANPAZ6VZFIT5KFKS3R6RG', 'Arn': 'arn:aws:iam::684361860346:policy/corighose/collinsefe/newer-chaos-policy-for-collins', 'Path': '/corighose/collinsefe/', 'DefaultVersionId': 'v1', 'AttachmentCount': 0, 'PermissionsBoundaryUsageCount': 0, 'IsAttachable': True, 'CreateDate': datetime.datetime(2023, 8, 29, 11, 57, 30, tzinfo=tzutc()), 'UpdateDate': datetime.datetime(2023, 8, 29, 11, 57, 30, tzinfo=tzutc())}, 'ResponseMetadata': {'RequestId': '811b4ea6-ed81-474e-b96c-3d536026f49a', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': '811b4ea6-ed81-474e-b96c-3d536026f49a', 'content-type': 'text/xml', 'content-length': '837', 'date': 'Tue, 29 Aug 2023 11:57:29 GMT'}, 'RetryAttempts': 0}}'
-[36m[2023-08-29 12:57:30 DEBUG] [__init__:450][39m No controls to apply on 'activity'
-[36m[2023-08-29 12:57:30 DEBUG] [__init__:450][39m No controls to apply on 'method'
-[32m[2023-08-29 12:57:30 INFO] [run:964][39m Let's rollback...
-[36m[2023-08-29 12:57:30 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
-[32m[2023-08-29 12:57:30 INFO] [rollback:31][39m No declared rollbacks, let's move on.
-[36m[2023-08-29 12:57:30 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
-[32m[2023-08-29 12:57:30 INFO] [run:515][39m Experiment ended with status: completed
-[36m[2023-08-29 12:57:30 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
-[36m[2023-08-29 12:57:30 DEBUG] [__init__:103][39m Cleaning up controls
-[36m[2023-08-29 12:57:30 DEBUG] [caching:42][39m Clearing activities cache
-[36m[2023-08-29 13:09:09 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 13:09:09 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 13:09:09 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 13:09:09 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 13:09:09 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 13:09:09 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 13:09:09 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 13:09:09 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 13:09:09 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 13:09:09 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 13:09:09 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 13:09:09 DEBUG] [secret:103][39m Done loading secrets
-[32m[2023-08-29 13:09:09 INFO] [experiment:109][39m Experiment looks valid
-[36m[2023-08-29 13:09:09 DEBUG] [caching:42][39m Clearing activities cache
-[36m[2023-08-29 13:09:09 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
-[36m[2023-08-29 13:09:09 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 13:09:09 DEBUG] [caching:35][39m Cached 1 activities
-[36m[2023-08-29 13:09:09 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 13:09:09 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 13:09:09 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 13:09:09 DEBUG] [configuration:160][39m Loading dynamic configuration...
-[32m[2023-08-29 13:09:09 INFO] [run:369][39m Running experiment: attach-a-policy
-[36m[2023-08-29 13:09:09 DEBUG] [__init__:64][39m Initializing controls
-[32m[2023-08-29 13:09:09 INFO] [run:396][39m Steady-state strategy: default
-[32m[2023-08-29 13:09:09 INFO] [run:400][39m Rollbacks strategy: default
-[32m[2023-08-29 13:09:09 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
-[36m[2023-08-29 13:09:09 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
-[32m[2023-08-29 13:09:09 INFO] [run:684][39m Playing your experiment's method now...
-[36m[2023-08-29 13:09:09 DEBUG] [__init__:450][39m No controls to apply on 'method'
-[36m[2023-08-29 13:09:09 DEBUG] [__init__:450][39m No controls to apply on 'activity'
-[32m[2023-08-29 13:09:09 INFO] [activity:215][39m Probe: attach-role-policy
-[36m[2023-08-29 13:09:09 DEBUG] [python:33][39m Activity 'attach-role-policy' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/iam/actions.py'
-[36m[2023-08-29 13:09:09 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
-[36m[2023-08-29 13:09:09 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
-[36m[2023-08-29 13:09:12 DEBUG] [activity:294][39m Activity failed
-    Traceback (most recent call last):
-      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/iam/actions.py", line 48, in attach_role_policy
-        return client.attach_role_policy(PolicyArn=arn, RoleName=role_name)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               ^^^^^^^^^^^^^^^^^^^^^
       File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
         return self._make_api_call(operation_name, kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
       File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
         raise error_class(parsed_response, operation_name)
-    botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the AttachRolePolicy operation: The specified value for roleName is invalid. It must contain only alphanumeric characters and/or the following: +=,.@_-
+    botocore.errorfactory.EntityAlreadyExistsException: An error occurred (EntityAlreadyExists) when calling the CreatePolicy operation: A policy called newer-chaos-policy-for-collins already exists. Duplicate names are not allowed.
     
     During handling of the above exception, another exception occurred:
     
@@ -594,9 +103,9 @@
       File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
         return func(**arguments)
                ^^^^^^^^^^^^^^^^^
-      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/iam/actions.py", line 50, in attach_role_policy
-        raise FailedActivity(
-    chaoslib.exceptions.ActivityFailed: failed attaching role 'chas-ec2-role ' to policy 'arn:aws:iam::684361860346:policy/corighose/collinsefe/newer-chaos-policy-for-collins': An error occurred (ValidationError) when calling the AttachRolePolicy operation: The specified value for roleName is invalid. It must contain only alphanumeric characters and/or the following: +=,.@_-
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/iam/actions.py", line 34, in create_policy
+        raise FailedActivity(f"failed creating a policy: {str(x)}")
+    chaoslib.exceptions.ActivityFailed: failed creating a policy: An error occurred (EntityAlreadyExists) when calling the CreatePolicy operation: A policy called newer-chaos-policy-for-collins already exists. Duplicate names are not allowed.
     
     During handling of the above exception, another exception occurred:
     
@@ -609,92 +118,107 @@
       File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
         return func(**arguments)
                ^^^^^^^^^^^^^^^^^
-      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/iam/actions.py", line 50, in attach_role_policy
-        raise FailedActivity(
-    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: failed attaching role 'chas-ec2-role ' to policy 'arn:aws:iam::684361860346:policy/corighose/collinsefe/newer-chaos-policy-for-collins': An error occurred (ValidationError) when calling the AttachRolePolicy operation: The specified value for roleName is invalid. It must contain only alphanumeric characters and/or the following: +=,.@_-
-[31m[2023-08-29 13:09:12 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: failed attaching role 'chas-ec2-role ' to policy 'arn:aws:iam::684361860346:policy/corighose/collinsefe/newer-chaos-policy-for-collins': An error occurred (ValidationError) when calling the AttachRolePolicy operation: The specified value for roleName is invalid. It must contain only alphanumeric characters and/or the following: +=,.@_-
-[36m[2023-08-29 13:09:12 DEBUG] [__init__:450][39m No controls to apply on 'activity'
-[36m[2023-08-29 13:09:12 DEBUG] [__init__:450][39m No controls to apply on 'method'
-[32m[2023-08-29 13:09:12 INFO] [run:964][39m Let's rollback...
-[36m[2023-08-29 13:09:12 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
-[32m[2023-08-29 13:09:12 INFO] [rollback:31][39m No declared rollbacks, let's move on.
-[36m[2023-08-29 13:09:12 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
-[32m[2023-08-29 13:09:12 INFO] [run:515][39m Experiment ended with status: completed
-[36m[2023-08-29 13:09:12 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
-[36m[2023-08-29 13:09:12 DEBUG] [__init__:103][39m Cleaning up controls
-[36m[2023-08-29 13:09:12 DEBUG] [caching:42][39m Clearing activities cache
-[36m[2023-08-29 13:09:33 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 13:09:33 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 13:09:33 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 13:09:33 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 13:09:33 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 13:09:33 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 13:09:33 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 13:09:33 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 13:09:33 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 13:09:33 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 13:09:33 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 13:09:33 DEBUG] [secret:103][39m Done loading secrets
-[32m[2023-08-29 13:09:34 INFO] [experiment:109][39m Experiment looks valid
-[36m[2023-08-29 13:09:34 DEBUG] [caching:42][39m Clearing activities cache
-[36m[2023-08-29 13:09:34 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
-[36m[2023-08-29 13:09:34 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 13:09:34 DEBUG] [caching:35][39m Cached 1 activities
-[36m[2023-08-29 13:09:34 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 13:09:34 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 13:09:34 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 13:09:34 DEBUG] [configuration:160][39m Loading dynamic configuration...
-[32m[2023-08-29 13:09:34 INFO] [run:369][39m Running experiment: attach-a-policy
-[36m[2023-08-29 13:09:34 DEBUG] [__init__:64][39m Initializing controls
-[32m[2023-08-29 13:09:34 INFO] [run:396][39m Steady-state strategy: default
-[32m[2023-08-29 13:09:34 INFO] [run:400][39m Rollbacks strategy: default
-[32m[2023-08-29 13:09:34 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
-[36m[2023-08-29 13:09:34 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
-[32m[2023-08-29 13:09:34 INFO] [run:684][39m Playing your experiment's method now...
-[36m[2023-08-29 13:09:34 DEBUG] [__init__:450][39m No controls to apply on 'method'
-[36m[2023-08-29 13:09:34 DEBUG] [__init__:450][39m No controls to apply on 'activity'
-[32m[2023-08-29 13:09:34 INFO] [activity:215][39m Probe: attach-role-policy
-[36m[2023-08-29 13:09:34 DEBUG] [python:33][39m Activity 'attach-role-policy' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/iam/actions.py'
-[36m[2023-08-29 13:09:34 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
-[36m[2023-08-29 13:09:34 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
-[36m[2023-08-29 13:09:35 DEBUG] [activity:237][39m   => succeeded with '{'ResponseMetadata': {'RequestId': 'f30d6834-5ca2-4101-a601-05160648f99f', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': 'f30d6834-5ca2-4101-a601-05160648f99f', 'content-type': 'text/xml', 'content-length': '212', 'date': 'Tue, 29 Aug 2023 12:09:34 GMT'}, 'RetryAttempts': 0}}'
-[36m[2023-08-29 13:09:35 DEBUG] [__init__:450][39m No controls to apply on 'activity'
-[36m[2023-08-29 13:09:35 DEBUG] [__init__:450][39m No controls to apply on 'method'
-[32m[2023-08-29 13:09:35 INFO] [run:964][39m Let's rollback...
-[36m[2023-08-29 13:09:35 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
-[32m[2023-08-29 13:09:35 INFO] [rollback:31][39m No declared rollbacks, let's move on.
-[36m[2023-08-29 13:09:35 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
-[32m[2023-08-29 13:09:35 INFO] [run:515][39m Experiment ended with status: completed
-[36m[2023-08-29 13:09:35 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
-[36m[2023-08-29 13:09:35 DEBUG] [__init__:103][39m Cleaning up controls
-[36m[2023-08-29 13:09:35 DEBUG] [caching:42][39m Clearing activities cache
-[36m[2023-08-29 14:03:28 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 14:03:28 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 14:03:28 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 14:04:28 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 14:04:28 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 14:04:28 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 14:04:28 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 14:04:28 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 14:04:28 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 14:04:28 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 14:04:28 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 14:04:28 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 14:04:28 DEBUG] [caching:42][39m Clearing activities cache
-[31m[2023-08-29 14:04:28 ERROR] [cli:278][39m could not find Python module 'chaosaws.iam.actions' in activity 'create-a-new-policy'
-[36m[2023-08-29 14:04:28 DEBUG] [cli:279][39m could not find Python module 'chaosaws.iam.actions' in activity 'create-a-new-policy'
-[36m[2023-08-29 14:07:48 DEBUG] [cli:114][39m ###############################################################################
-[36m[2023-08-29 14:07:48 DEBUG] [cli:115][39m Running command 'run'
-[36m[2023-08-29 14:07:48 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
-[36m[2023-08-29 14:07:50 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
-[36m[2023-08-29 14:07:50 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 14:07:50 DEBUG] [__init__:450][39m No controls to apply on 'loader'
-[36m[2023-08-29 14:07:50 DEBUG] [caching:24][39m Building activity cache...
-[36m[2023-08-29 14:07:50 DEBUG] [caching:35][39m Cached 1 activities
-[32m[2023-08-29 14:07:50 INFO] [experiment:58][39m Validating the experiment's syntax
-[36m[2023-08-29 14:07:50 DEBUG] [configuration:63][39m Loading configuration...
-[36m[2023-08-29 14:07:50 DEBUG] [secret:78][39m Loading secrets...
-[36m[2023-08-29 14:07:50 DEBUG] [secret:103][39m Done loading secrets
-[36m[2023-08-29 14:07:50 DEBUG] [caching:42][39m Clearing activities cache
-[31m[2023-08-29 14:07:50 ERROR] [cli:278][39m could not find Python module 'chaosaws.ssm.actions' in activity 'create-document'
-[36m[2023-08-29 14:07:50 DEBUG] [cli:279][39m could not find Python module 'chaosaws.ssm.actions' in activity 'create-document'
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/iam/actions.py", line 34, in create_policy
+        raise FailedActivity(f"failed creating a policy: {str(x)}")
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: failed creating a policy: An error occurred (EntityAlreadyExists) when calling the CreatePolicy operation: A policy called newer-chaos-policy-for-collins already exists. Duplicate names are not allowed.
+[31m[2023-08-31 09:39:03 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: failed creating a policy: An error occurred (EntityAlreadyExists) when calling the CreatePolicy operation: A policy called newer-chaos-policy-for-collins already exists. Duplicate names are not allowed.
+[36m[2023-08-31 09:39:03 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 09:39:03 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 09:39:03 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 09:39:03 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 09:39:03 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 09:39:03 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 09:39:03 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 09:39:03 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 09:39:03 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 09:39:03 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 09:42:25 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 09:42:25 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 09:42:25 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 09:42:26 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 09:42:26 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 09:42:26 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 09:42:26 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 09:42:26 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 09:42:26 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 09:42:26 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 09:42:26 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 09:42:26 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 09:42:26 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 09:42:26 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 09:42:26 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 09:42:26 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 09:42:26 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 09:42:26 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 09:42:26 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 09:42:26 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 09:42:26 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 09:42:26 INFO] [run:369][39m Running experiment: create-a-policy
+[36m[2023-08-31 09:42:26 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 09:42:26 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 09:42:26 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 09:42:26 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 09:42:26 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 09:42:26 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 09:42:26 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 09:42:26 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 09:42:26 INFO] [activity:215][39m Probe: create-a-new-policy
+[36m[2023-08-31 09:42:26 DEBUG] [python:33][39m Activity 'create-a-new-policy' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/iam/actions.py'
+[36m[2023-08-31 09:42:26 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 09:42:26 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 09:42:27 DEBUG] [activity:237][39m   => succeeded with '{'Policy': {'PolicyName': '1-chaos-policy-for-collins', 'PolicyId': 'ANPAZ6VZFIT5OHUWH3DWO', 'Arn': 'arn:aws:iam::684361860346:policy/corighose/collinsefe/1-chaos-policy-for-collins', 'Path': '/corighose/collinsefe/', 'DefaultVersionId': 'v1', 'AttachmentCount': 0, 'PermissionsBoundaryUsageCount': 0, 'IsAttachable': True, 'CreateDate': datetime.datetime(2023, 8, 31, 8, 42, 27, tzinfo=tzutc()), 'UpdateDate': datetime.datetime(2023, 8, 31, 8, 42, 27, tzinfo=tzutc())}, 'ResponseMetadata': {'RequestId': 'f719c4b6-10f2-4745-ad88-437be0248551', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': 'f719c4b6-10f2-4745-ad88-437be0248551', 'content-type': 'text/xml', 'content-length': '829', 'date': 'Thu, 31 Aug 2023 08:42:27 GMT'}, 'RetryAttempts': 0}}'
+[36m[2023-08-31 09:42:27 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 09:42:27 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 09:42:27 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 09:42:27 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 09:42:27 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 09:42:27 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 09:42:27 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 09:42:27 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 09:42:27 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 09:42:27 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 09:46:34 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 09:46:34 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 09:46:34 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 09:46:34 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 09:46:34 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 09:46:34 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 09:46:34 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 09:46:34 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 09:46:34 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 09:46:34 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 09:46:34 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 09:46:34 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 09:46:35 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 09:46:35 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 09:46:35 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 09:46:35 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 09:46:35 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 09:46:35 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 09:46:35 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 09:46:35 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 09:46:35 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 09:46:35 INFO] [run:369][39m Running experiment: attach-a-policy
+[36m[2023-08-31 09:46:35 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 09:46:35 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 09:46:35 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 09:46:35 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 09:46:35 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 09:46:35 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 09:46:35 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 09:46:35 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 09:46:35 INFO] [activity:215][39m Probe: attach-role-policy
+[36m[2023-08-31 09:46:35 DEBUG] [python:33][39m Activity 'attach-role-policy' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/iam/actions.py'
+[36m[2023-08-31 09:46:35 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 09:46:35 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 09:46:38 DEBUG] [activity:237][39m   => succeeded with '{'ResponseMetadata': {'RequestId': '8b525524-eb70-4026-807a-86bb2d1d8077', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': '8b525524-eb70-4026-807a-86bb2d1d8077', 'content-type': 'text/xml', 'content-length': '212', 'date': 'Thu, 31 Aug 2023 08:46:37 GMT'}, 'RetryAttempts': 0}}'
+[36m[2023-08-31 09:46:38 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 09:46:38 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 09:46:38 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 09:46:38 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 09:46:38 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 09:46:38 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 09:46:38 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 09:46:38 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 09:46:38 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 09:46:38 DEBUG] [caching:42][39m Clearing activities cache

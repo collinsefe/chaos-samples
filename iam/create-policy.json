@@ -19,7 +19,7 @@
                         "module": "chaosaws.iam.actions",
                         "func": "create_policy",
                         "arguments": {
-                            "name": "newer-chaos-policy-for-collins",
+                            "name": "1-chaos-policy-for-collins",
                             "path": "/corighose/collinsefe/",
                             "policy": {
                                 "Version": "2012-10-17",

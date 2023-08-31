@@ -1,7 +1,7 @@
 {
   "chaoslib-version": "1.38.0",
   "platform": "macOS-10.16-x86_64-i386-64bit",
-  "node": "Collinss-MBP-2",
+  "node": "Collinss-MacBook-Pro-2.local",
   "experiment": {
     "title": "attach-a-policy",
     "description": "chaos toolkit is used to attach an IAM policy",
@@ -31,7 +31,7 @@
     ],
     "dry": null
   },
-  "start": "2023-08-29T12:09:34.022704",
+  "start": "2023-08-31T08:46:35.053718",
   "status": "completed",
   "deviated": false,
   "steady_states": {
@@ -56,24 +56,24 @@
       },
       "output": {
         "ResponseMetadata": {
-          "RequestId": "f30d6834-5ca2-4101-a601-05160648f99f",
+          "RequestId": "8b525524-eb70-4026-807a-86bb2d1d8077",
           "HTTPStatusCode": 200,
           "HTTPHeaders": {
-            "x-amzn-requestid": "f30d6834-5ca2-4101-a601-05160648f99f",
+            "x-amzn-requestid": "8b525524-eb70-4026-807a-86bb2d1d8077",
             "content-type": "text/xml",
             "content-length": "212",
-            "date": "Tue, 29 Aug 2023 12:09:34 GMT"
+            "date": "Thu, 31 Aug 2023 08:46:37 GMT"
           },
           "RetryAttempts": 0
         }
       },
-      "start": "2023-08-29T12:09:34.023614",
+      "start": "2023-08-31T08:46:35.054703",
       "status": "succeeded",
-      "end": "2023-08-29T12:09:35.386171",
-      "duration": 1.362557
+      "end": "2023-08-31T08:46:38.392411",
+      "duration": 3.337708
     }
   ],
   "rollbacks": [],
-  "end": "2023-08-29T12:09:35.387047",
-  "duration": 1.3827741146087646
+  "end": "2023-08-31T08:46:38.393222",
+  "duration": 3.365907907485962
 }
