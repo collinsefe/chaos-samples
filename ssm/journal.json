@@ -23,18 +23,18 @@
           "module": "chaosaws.ssm.actions",
           "func": "create_document",
           "arguments": {
-            "path_content": "./test-doc.csv",
+            "path_content": "./testdoc.json",
             "name": "chaos-ssm-doc",
-            "version_name": "",
-            "document_type": "",
-            "document_format": ""
+            "version_name": "1",
+            "document_type": "Command",
+            "document_format": "JSON"
           }
         }
       }
     ],
     "dry": null
   },
-  "start": "2023-08-29T14:35:45.622217",
+  "start": "2023-08-31T12:29:38.064754",
   "status": "completed",
   "deviated": false,
   "steady_states": {
@@ -52,36 +52,66 @@
           "module": "chaosaws.ssm.actions",
           "func": "create_document",
           "arguments": {
-            "path_content": "./test-doc.csv",
+            "path_content": "./testdoc.json",
             "name": "chaos-ssm-doc",
-            "version_name": "",
-            "document_type": "",
-            "document_format": ""
+            "version_name": "1",
+            "document_type": "Command",
+            "document_format": "JSON"
           }
         }
       },
-      "output": null,
-      "start": "2023-08-29T14:35:45.623092",
-      "status": "failed",
-      "exception": [
-        "Traceback (most recent call last):\n",
-        "  File \"/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py\", line 39, in create_document\n    return client.create_document(\n           ^^^^^^^^^^^^^^^^^^^^^^^\n",
-        "  File \"/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py\", line 530, in _api_call\n    return self._make_api_call(operation_name, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-        "  File \"/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py\", line 960, in _make_api_call\n    raise error_class(parsed_response, operation_name)\n",
-        "botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the CreateDocument operation: 3 validation errors detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType; Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\\-.]{1,128}$; Value at 'documentFormat' failed to satisfy constraint: Member must satisfy enum value set: [YAML, JSON, TEXT]\n",
-        "\nDuring handling of the above exception, another exception occurred:\n\n",
-        "Traceback (most recent call last):\n",
-        "  File \"/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py\", line 56, in run_python_activity\n    return func(**arguments)\n           ^^^^^^^^^^^^^^^^^\n",
-        "  File \"/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py\", line 47, in create_document\n    raise ActivityFailed(\n",
-        "chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '3 validation errors detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType; Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\\-.]{1,128}$; Value at 'documentFormat' failed to satisfy constraint: Member must satisfy enum value set: [YAML, JSON, TEXT]'\n",
-        "\nDuring handling of the above exception, another exception occurred:\n\n",
-        "chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '3 validation errors detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType; Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\\-.]{1,128}$; Value at 'documentFormat' failed to satisfy constraint: Member must satisfy enum value set: [YAML, JSON, TEXT]'\n"
-      ],
-      "end": "2023-08-29T14:35:46.871407",
-      "duration": 1.248315
+      "output": {
+        "DocumentDescription": {
+          "Hash": "95d2eda147c9934aa989bd5e495be6b22ed1e5a581e2d6a907aee2e5f3b8ec7e",
+          "HashType": "Sha256",
+          "Name": "chaos-ssm-doc",
+          "VersionName": "1",
+          "Owner": "684361860346",
+          "CreatedDate": "2023-08-31T13:29:38.998000+01:00",
+          "Status": "Creating",
+          "DocumentVersion": "1",
+          "Description": "Example document",
+          "Parameters": [
+            {
+              "Name": "Message",
+              "Type": "String",
+              "Description": "Example parameter",
+              "DefaultValue": "Hello World"
+            }
+          ],
+          "PlatformTypes": [
+            "Windows",
+            "Linux",
+            "MacOS"
+          ],
+          "DocumentType": "Command",
+          "SchemaVersion": "2.2",
+          "LatestVersion": "1",
+          "DefaultVersion": "1",
+          "DocumentFormat": "JSON",
+          "Tags": []
+        },
+        "ResponseMetadata": {
+          "RequestId": "39febc6b-25da-4be4-ab21-744d712b4577",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "server": "Server",
+            "date": "Thu, 31 Aug 2023 12:29:39 GMT",
+            "content-type": "application/x-amz-json-1.1",
+            "content-length": "620",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "39febc6b-25da-4be4-ab21-744d712b4577"
+          },
+          "RetryAttempts": 0
+        }
+      },
+      "start": "2023-08-31T12:29:38.065776",
+      "status": "succeeded",
+      "end": "2023-08-31T12:29:39.081758",
+      "duration": 1.015982
     }
   ],
   "rollbacks": [],
-  "end": "2023-08-29T14:35:46.872020",
-  "duration": 1.2684962749481201
+  "end": "2023-08-31T12:29:39.082440",
+  "duration": 1.0366649627685547
 }

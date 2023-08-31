@@ -19,14 +19,14 @@
                         "module": "chaosaws.ssm.actions",
                         "func": "create_document",
                         "arguments": {
-                            "path_content": "./test-doc.csv",
+                            "path_content": "./testdoc.json",
                             "name": "chaos-ssm-doc",
-                            "version_name": "",
-                            "document_type": "",
-                            "document_format": ""
-                        }
+                            "version_name": "1",
+                            "document_type": "Command",
+                            "document_format": "JSON"
                         }
                     }
-                    ]
-                }
+            }
+        ]
+    }
                 

@@ -456,3 +456,2222 @@
 [36m[2023-08-29 15:35:46 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
 [36m[2023-08-29 15:35:46 DEBUG] [__init__:103][39m Cleaning up controls
 [36m[2023-08-29 15:35:46 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:28:27 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 10:28:27 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 10:28:27 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 10:28:28 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 10:28:28 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:28:28 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:28:28 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:28:28 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 10:28:28 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 10:28:28 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:28:28 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:28:28 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 10:28:28 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 10:28:28 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:28:28 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 10:28:28 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:28:28 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 10:28:28 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:28:28 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:28:28 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 10:28:28 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 10:28:28 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 10:28:28 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 10:28:28 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 10:28:28 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 10:28:28 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 10:28:28 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 10:28:28 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 10:28:28 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 10:28:28 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 10:28:28 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 10:28:28 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 10:28:28 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 10:28:28 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 10:28:33 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the CreateDocument operation: 3 validation errors detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType; Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\-.]{1,128}$; Value at 'documentFormat' failed to satisfy constraint: Member must satisfy enum value set: [YAML, JSON, TEXT]
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '3 validation errors detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType; Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\-.]{1,128}$; Value at 'documentFormat' failed to satisfy constraint: Member must satisfy enum value set: [YAML, JSON, TEXT]'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '3 validation errors detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType; Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\-.]{1,128}$; Value at 'documentFormat' failed to satisfy constraint: Member must satisfy enum value set: [YAML, JSON, TEXT]'
+[31m[2023-08-31 10:28:33 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '3 validation errors detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType; Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\-.]{1,128}$; Value at 'documentFormat' failed to satisfy constraint: Member must satisfy enum value set: [YAML, JSON, TEXT]'
+[36m[2023-08-31 10:28:33 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 10:28:33 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 10:28:33 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 10:28:33 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:28:33 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 10:28:33 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:28:33 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 10:28:33 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 10:28:33 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 10:28:33 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:29:12 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 10:29:12 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 10:29:12 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 10:29:12 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 10:29:12 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:29:12 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:29:12 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:29:12 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 10:29:12 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 10:29:12 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:29:12 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:29:12 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 10:29:12 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 10:29:12 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:29:12 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 10:29:12 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:29:12 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 10:29:12 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:29:12 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:29:12 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 10:29:12 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 10:29:12 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 10:29:12 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 10:29:12 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 10:29:12 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 10:29:12 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 10:29:12 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 10:29:12 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 10:29:12 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 10:29:12 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 10:29:12 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 10:29:12 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 10:29:12 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 36, in create_document
+        with open(path_content) as open_file:
+             ^^^^^^^^^^^^^^^^^^
+    FileNotFoundError: [Errno 2] No such file or directory: './test-doc.csv'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 36, in create_document
+        with open(path_content) as open_file:
+             ^^^^^^^^^^^^^^^^^^
+    chaoslib.exceptions.ActivityFailed: FileNotFoundError: [Errno 2] No such file or directory: './test-doc.csv'
+[31m[2023-08-31 10:29:12 ERROR] [activity:245][39m   => failed: FileNotFoundError: [Errno 2] No such file or directory: './test-doc.csv'
+[36m[2023-08-31 10:29:12 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 10:29:12 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 10:29:12 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 10:29:12 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:29:12 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 10:29:12 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:29:12 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 10:29:12 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 10:29:12 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 10:29:12 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:29:55 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 10:29:55 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 10:29:55 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 10:29:55 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 10:29:55 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:29:55 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:29:55 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:29:55 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 10:29:55 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 10:29:55 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:29:55 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:29:55 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 10:29:55 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 10:29:55 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:29:55 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 10:29:55 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:29:55 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 10:29:55 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:29:55 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:29:55 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 10:29:55 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 10:29:55 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 10:29:55 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 10:29:55 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 10:29:55 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 10:29:55 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 10:29:55 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 10:29:55 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 10:29:55 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 10:29:55 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 10:29:55 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 10:29:55 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 10:29:55 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 10:29:55 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 10:29:56 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the CreateDocument operation: 3 validation errors detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType; Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\-.]{1,128}$; Value at 'documentFormat' failed to satisfy constraint: Member must satisfy enum value set: [YAML, JSON, TEXT]
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': '3 validation errors detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType; Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\-.]{1,128}$; Value at 'documentFormat' failed to satisfy constraint: Member must satisfy enum value set: [YAML, JSON, TEXT]'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': '3 validation errors detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType; Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\-.]{1,128}$; Value at 'documentFormat' failed to satisfy constraint: Member must satisfy enum value set: [YAML, JSON, TEXT]'
+[31m[2023-08-31 10:29:56 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': '3 validation errors detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType; Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\-.]{1,128}$; Value at 'documentFormat' failed to satisfy constraint: Member must satisfy enum value set: [YAML, JSON, TEXT]'
+[36m[2023-08-31 10:29:56 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 10:29:56 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 10:29:56 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 10:29:56 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:29:56 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 10:29:56 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:29:56 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 10:29:56 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 10:29:56 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 10:29:56 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:38:12 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 10:38:12 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 10:38:12 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 10:38:12 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 10:38:12 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:38:12 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:38:12 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:38:12 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 10:38:12 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 10:38:12 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:38:12 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:38:12 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 10:38:12 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 10:38:12 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:38:12 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 10:38:12 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:38:12 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 10:38:12 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:38:12 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:38:12 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 10:38:12 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 10:38:12 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 10:38:12 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 10:38:12 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 10:38:12 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 10:38:12 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 10:38:12 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 10:38:12 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 10:38:12 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 10:38:12 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 10:38:12 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 10:38:12 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 10:38:12 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 10:38:12 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 10:38:14 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the CreateDocument operation: 1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+[31m[2023-08-31 10:38:14 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+[36m[2023-08-31 10:38:14 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 10:38:14 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 10:38:14 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 10:38:14 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:38:14 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 10:38:14 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:38:14 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 10:38:14 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 10:38:14 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 10:38:14 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:38:44 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 10:38:44 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 10:38:44 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 10:38:44 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 10:38:44 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:38:44 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:38:44 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:38:44 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 10:38:44 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 10:38:44 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:38:44 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:38:44 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 10:38:44 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 10:38:44 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:38:44 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 10:38:44 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:38:44 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 10:38:44 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:38:44 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:38:44 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 10:38:44 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 10:38:44 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 10:38:44 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 10:38:44 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 10:38:44 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 10:38:44 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 10:38:44 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 10:38:44 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 10:38:44 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 10:38:44 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 10:38:44 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 10:38:44 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 10:38:44 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 10:38:44 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 10:38:47 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the CreateDocument operation: 1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+[31m[2023-08-31 10:38:47 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+[36m[2023-08-31 10:38:47 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 10:38:47 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 10:38:47 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 10:38:47 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:38:47 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 10:38:47 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:38:47 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 10:38:47 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 10:38:47 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 10:38:47 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:39:12 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 10:39:12 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 10:39:12 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 10:39:12 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 10:39:12 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:39:12 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:39:12 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:39:12 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 10:39:12 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 10:39:12 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:39:12 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:39:12 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 10:39:12 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 10:39:12 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:39:12 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 10:39:12 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:39:12 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 10:39:12 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:39:12 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:39:12 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 10:39:12 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 10:39:12 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 10:39:13 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 10:39:13 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 10:39:13 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 10:39:13 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 10:39:13 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 10:39:13 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 10:39:13 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 10:39:13 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 10:39:13 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 10:39:13 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 10:39:13 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 10:39:13 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 10:39:13 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the CreateDocument operation: 1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+[31m[2023-08-31 10:39:13 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+[36m[2023-08-31 10:39:13 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 10:39:13 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 10:39:13 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 10:39:13 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:39:13 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 10:39:13 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:39:13 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 10:39:13 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 10:39:13 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 10:39:13 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:39:37 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 10:39:37 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 10:39:37 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 10:39:37 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 10:39:37 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:39:37 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:39:37 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:39:37 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 10:39:37 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 10:39:37 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:39:37 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:39:37 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 10:39:37 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 10:39:37 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:39:37 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 10:39:37 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:39:37 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 10:39:37 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:39:37 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:39:37 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 10:39:37 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 10:39:37 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 10:39:37 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 10:39:37 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 10:39:37 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 10:39:37 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 10:39:37 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 10:39:37 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 10:39:37 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 10:39:37 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 10:39:37 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 10:39:37 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 10:39:37 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 10:39:37 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 10:39:39 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the CreateDocument operation: 1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+[31m[2023-08-31 10:39:39 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+[36m[2023-08-31 10:39:39 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 10:39:39 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 10:39:39 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 10:39:39 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:39:39 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 10:39:39 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:39:39 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 10:39:39 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 10:39:39 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 10:39:39 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:42:00 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 10:42:00 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 10:42:00 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 10:42:01 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 10:42:01 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:42:01 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:42:01 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:42:01 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 10:42:01 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 10:42:01 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:42:01 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:42:01 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 10:42:01 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 10:42:01 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:42:01 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 10:42:01 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:42:01 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 10:42:01 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:42:01 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:42:01 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 10:42:01 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 10:42:01 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 10:42:01 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 10:42:01 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 10:42:01 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 10:42:01 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 10:42:01 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 10:42:01 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 10:42:01 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 10:42:01 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 10:42:01 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 10:42:01 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 10:42:01 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 10:42:01 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 10:42:02 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the CreateDocument operation: 1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+[31m[2023-08-31 10:42:02 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+[36m[2023-08-31 10:42:02 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 10:42:02 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 10:42:02 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 10:42:02 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:42:02 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 10:42:02 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:42:02 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 10:42:02 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 10:42:02 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 10:42:02 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:43:22 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 10:43:22 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 10:43:22 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 10:43:22 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 10:43:22 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:43:22 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:43:22 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:43:22 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 10:43:22 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 10:43:22 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:43:22 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:43:22 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 10:43:22 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 10:43:22 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:43:22 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 10:43:22 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:43:22 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 10:43:22 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:43:22 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:43:22 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 10:43:22 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 10:43:22 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 10:43:22 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 10:43:22 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 10:43:22 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 10:43:22 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 10:43:22 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 10:43:22 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 10:43:22 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 10:43:22 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 10:43:22 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 10:43:22 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 10:43:22 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 10:43:22 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 10:43:23 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the CreateDocument operation: 1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+[31m[2023-08-31 10:43:23 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+[36m[2023-08-31 10:43:23 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 10:43:23 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 10:43:23 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 10:43:23 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:43:23 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 10:43:23 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:43:23 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 10:43:23 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 10:43:23 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 10:43:23 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:44:05 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 10:44:05 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 10:44:05 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 10:44:05 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 10:44:05 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:44:05 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:44:05 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:44:05 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 10:44:05 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 10:44:05 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:44:05 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:44:05 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 10:44:05 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 10:44:05 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:44:05 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 10:44:05 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:44:05 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 10:44:05 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:44:05 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:44:05 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 10:44:05 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 10:44:05 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 10:44:05 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 10:44:05 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 10:44:05 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 10:44:05 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 10:44:05 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 10:44:05 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 10:44:05 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 10:44:05 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 10:44:05 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 10:44:05 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 10:44:05 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 10:44:05 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 10:44:07 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the CreateDocument operation: 1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+[31m[2023-08-31 10:44:07 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+[36m[2023-08-31 10:44:07 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 10:44:07 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 10:44:07 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 10:44:07 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:44:07 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 10:44:07 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:44:07 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 10:44:07 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 10:44:07 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 10:44:07 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:44:45 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 10:44:45 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 10:44:45 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 10:44:46 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 10:44:46 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:44:46 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:44:46 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:44:46 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 10:44:46 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 10:44:46 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:44:46 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:44:46 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 10:44:46 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 10:44:46 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:44:46 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 10:44:46 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:44:46 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 10:44:46 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:44:46 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:44:46 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 10:44:46 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 10:44:46 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 10:44:46 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 10:44:46 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 10:44:46 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 10:44:46 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 10:44:46 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 10:44:46 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 10:44:46 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 10:44:46 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 10:44:46 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 10:44:46 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 10:44:46 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 10:44:46 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 10:44:47 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.errorfactory.InvalidDocumentContent: An error occurred (InvalidDocumentContent) when calling the CreateDocument operation: JSON not well-formed. at Line: 1, Column: 5
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': 'JSON not well-formed. at Line: 1, Column: 5'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': 'JSON not well-formed. at Line: 1, Column: 5'
+[31m[2023-08-31 10:44:47 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm.json': 'JSON not well-formed. at Line: 1, Column: 5'
+[36m[2023-08-31 10:44:47 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 10:44:47 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 10:44:47 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 10:44:47 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:44:47 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 10:44:47 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:44:47 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 10:44:47 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 10:44:47 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 10:44:47 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:55:46 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 10:55:46 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 10:55:46 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 10:55:46 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 10:55:46 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:55:46 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:55:46 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:55:46 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 10:55:46 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 10:55:46 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:55:46 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:55:46 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 10:55:46 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 10:55:46 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:55:46 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 10:55:46 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:55:46 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 10:55:46 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:55:46 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:55:46 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 10:55:46 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 10:55:46 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 10:55:46 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 10:55:46 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 10:55:46 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 10:55:46 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 10:55:46 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 10:55:46 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 10:55:46 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 10:55:46 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 10:55:46 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 10:55:46 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 10:55:46 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 10:55:46 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 10:55:48 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.errorfactory.InvalidDocumentContent: An error occurred (InvalidDocumentContent) when calling the CreateDocument operation: Missing "schemaVersion" in the document. at Line: 4, Column: 1
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Missing "schemaVersion" in the document. at Line: 4, Column: 1'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Missing "schemaVersion" in the document. at Line: 4, Column: 1'
+[31m[2023-08-31 10:55:48 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Missing "schemaVersion" in the document. at Line: 4, Column: 1'
+[36m[2023-08-31 10:55:48 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 10:55:48 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 10:55:48 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 10:55:48 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:55:48 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 10:55:48 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:55:48 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 10:55:48 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 10:55:48 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 10:55:48 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:57:05 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 10:57:05 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 10:57:05 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 10:57:06 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 10:57:06 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:57:06 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 10:57:06 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:57:06 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 10:57:06 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 10:57:06 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:57:06 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:57:06 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 10:57:06 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 10:57:06 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 10:57:06 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 10:57:06 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 10:57:06 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 10:57:06 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 10:57:06 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 10:57:06 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 10:57:06 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 10:57:06 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 10:57:06 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 10:57:06 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 10:57:06 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 10:57:06 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 10:57:06 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 10:57:06 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 10:57:06 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 10:57:06 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 10:57:06 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 10:57:06 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 10:57:06 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 10:57:06 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 10:57:07 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.errorfactory.InvalidDocumentContent: An error occurred (InvalidDocumentContent) when calling the CreateDocument operation: 2.2 is not a valid schema version for Automation document type
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '2.2 is not a valid schema version for Automation document type'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '2.2 is not a valid schema version for Automation document type'
+[31m[2023-08-31 10:57:07 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '2.2 is not a valid schema version for Automation document type'
+[36m[2023-08-31 10:57:07 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 10:57:07 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 10:57:07 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 10:57:07 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:57:07 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 10:57:07 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 10:57:07 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 10:57:07 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 10:57:07 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 10:57:07 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 11:01:22 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 11:01:22 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 11:01:22 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 11:01:23 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 11:01:23 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 11:01:23 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 11:01:23 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 11:01:23 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 11:01:23 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 11:01:23 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 11:01:23 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 11:01:23 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 11:01:23 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 11:01:23 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 11:01:23 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 11:01:23 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 11:01:23 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 11:01:23 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 11:01:23 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 11:01:23 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 11:01:23 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 11:01:23 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 11:01:23 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 11:01:23 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 11:01:23 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 11:01:23 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 11:01:23 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 11:01:23 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 11:01:23 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 11:01:23 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 11:01:23 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 11:01:23 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 11:01:23 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 11:01:23 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 11:01:26 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.errorfactory.InvalidDocumentContent: An error occurred (InvalidDocumentContent) when calling the CreateDocument operation: Document schema version is invalid. Value: 1 at Line: 3, Column: 4
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Document schema version is invalid. Value: 1 at Line: 3, Column: 4'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Document schema version is invalid. Value: 1 at Line: 3, Column: 4'
+[31m[2023-08-31 11:01:26 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Document schema version is invalid. Value: 1 at Line: 3, Column: 4'
+[36m[2023-08-31 11:01:26 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 11:01:26 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 11:01:26 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 11:01:26 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 11:01:26 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 11:01:26 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 11:01:26 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 11:01:26 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 11:01:26 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 11:01:26 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 11:07:09 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 11:07:09 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 11:07:09 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 11:07:10 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 11:07:10 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 11:07:10 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 11:07:10 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 11:07:10 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 11:07:10 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 11:07:10 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 11:07:10 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 11:07:10 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 11:07:10 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 11:07:10 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 11:07:10 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 11:07:10 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 11:07:10 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 11:07:10 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 11:07:10 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 11:07:10 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 11:07:10 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 11:07:10 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 11:07:10 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 11:07:10 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 11:07:10 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 11:07:10 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 11:07:10 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 11:07:10 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 11:07:10 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 11:07:10 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 11:07:10 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 11:07:10 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 11:07:10 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 11:07:10 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 11:07:11 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.errorfactory.InvalidDocumentContent: An error occurred (InvalidDocumentContent) when calling the CreateDocument operation: 2.2 is not a valid schema version for Automation document type
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '2.2 is not a valid schema version for Automation document type'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '2.2 is not a valid schema version for Automation document type'
+[31m[2023-08-31 11:07:11 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '2.2 is not a valid schema version for Automation document type'
+[36m[2023-08-31 11:07:11 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 11:07:11 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 11:07:11 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 11:07:11 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 11:07:11 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 11:07:11 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 11:07:11 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 11:07:11 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 11:07:11 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 11:07:11 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 11:08:01 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 11:08:01 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 11:08:01 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 11:08:01 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 11:08:01 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 11:08:01 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 11:08:01 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 11:08:01 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 11:08:01 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 11:08:01 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 11:08:01 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 11:08:01 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 11:08:01 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 11:08:01 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 11:08:01 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 11:08:01 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 11:08:01 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 11:08:01 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 11:08:01 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 11:08:01 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 11:08:01 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 11:08:01 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 11:08:01 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 11:08:01 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 11:08:01 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 11:08:01 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 11:08:01 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 11:08:01 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 11:08:01 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 11:08:01 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 11:08:01 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 11:08:01 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 11:08:01 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 11:08:01 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 11:08:02 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the CreateDocument operation: 3 validation errors detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType; Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\-.]{1,128}$; Value at 'documentFormat' failed to satisfy constraint: Member must satisfy enum value set: [YAML, JSON, TEXT]
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '3 validation errors detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType; Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\-.]{1,128}$; Value at 'documentFormat' failed to satisfy constraint: Member must satisfy enum value set: [YAML, JSON, TEXT]'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '3 validation errors detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType; Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\-.]{1,128}$; Value at 'documentFormat' failed to satisfy constraint: Member must satisfy enum value set: [YAML, JSON, TEXT]'
+[31m[2023-08-31 11:08:02 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '3 validation errors detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType; Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\-.]{1,128}$; Value at 'documentFormat' failed to satisfy constraint: Member must satisfy enum value set: [YAML, JSON, TEXT]'
+[36m[2023-08-31 11:08:02 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 11:08:02 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 11:08:02 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 11:08:02 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 11:08:02 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 11:08:02 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 11:08:02 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 11:08:02 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 11:08:02 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 11:08:02 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 11:08:54 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 11:08:54 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 11:08:54 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 11:08:55 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 11:08:55 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 11:08:55 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 11:08:55 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 11:08:55 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 11:08:55 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 11:08:55 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 11:08:55 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 11:08:55 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 11:08:55 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 11:08:55 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 11:08:55 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 11:08:55 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 11:08:55 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 11:08:55 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 11:08:55 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 11:08:55 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 11:08:55 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 11:08:55 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 11:08:55 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 11:08:55 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 11:08:55 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 11:08:55 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 11:08:55 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 11:08:55 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 11:08:55 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 11:08:55 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 11:08:55 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 11:08:55 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 11:08:55 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 11:08:55 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 11:08:56 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the CreateDocument operation: 1 validation error detected: Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\-.]{1,128}$
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '1 validation error detected: Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\-.]{1,128}$'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '1 validation error detected: Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\-.]{1,128}$'
+[31m[2023-08-31 11:08:56 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '1 validation error detected: Value at 'versionName' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[a-zA-Z0-9_\-.]{1,128}$'
+[36m[2023-08-31 11:08:56 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 11:08:56 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 11:08:56 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 11:08:56 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 11:08:56 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 11:08:56 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 11:08:56 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 11:08:56 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 11:08:56 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 11:08:56 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 11:09:54 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 11:09:54 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 11:09:54 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 11:09:54 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 11:09:54 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 11:09:54 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 11:09:54 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 11:09:54 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 11:09:54 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 11:09:54 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 11:09:54 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 11:09:54 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 11:09:54 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 11:09:54 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 11:09:54 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 11:09:54 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 11:09:54 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 11:09:54 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 11:09:54 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 11:09:54 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 11:09:54 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 11:09:54 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 11:09:54 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 11:09:54 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 11:09:54 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 11:09:54 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 11:09:54 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 11:09:54 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 11:09:54 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 11:09:54 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 11:09:54 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 11:09:54 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 11:09:54 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 11:09:54 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 11:09:55 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.errorfactory.InvalidDocumentContent: An error occurred (InvalidDocumentContent) when calling the CreateDocument operation: Plugin aws:runPowerShellScript is not allowed for Policy document
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Plugin aws:runPowerShellScript is not allowed for Policy document'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Plugin aws:runPowerShellScript is not allowed for Policy document'
+[31m[2023-08-31 11:09:55 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Plugin aws:runPowerShellScript is not allowed for Policy document'
+[36m[2023-08-31 11:09:55 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 11:09:55 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 11:09:55 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 11:09:55 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 11:09:55 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 11:09:55 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 11:09:55 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 11:09:55 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 11:09:55 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 11:09:55 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 11:15:17 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 11:15:17 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 11:15:17 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 11:15:18 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 11:15:18 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 11:15:18 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 11:15:18 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 11:15:18 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 11:15:18 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 11:15:18 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 11:15:18 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 11:15:18 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 11:15:18 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 11:15:18 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 11:15:18 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 11:15:18 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 11:15:18 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 11:15:18 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 11:15:18 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 11:15:18 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 11:15:18 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 11:15:18 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 11:15:18 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 11:15:18 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 11:15:18 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 11:15:18 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 11:15:18 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 11:15:18 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 11:15:18 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 11:15:18 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 11:15:18 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 11:15:18 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 11:15:18 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 11:15:18 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 11:15:19 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.errorfactory.InvalidDocumentContent: An error occurred (InvalidDocumentContent) when calling the CreateDocument operation: Plugin aws:runPowerShellScript is not allowed for Policy document
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Plugin aws:runPowerShellScript is not allowed for Policy document'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Plugin aws:runPowerShellScript is not allowed for Policy document'
+[31m[2023-08-31 11:15:19 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Plugin aws:runPowerShellScript is not allowed for Policy document'
+[36m[2023-08-31 11:15:19 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 11:15:19 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 11:15:19 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 11:15:19 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 11:15:19 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 11:15:19 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 11:15:19 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 11:15:19 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 11:15:19 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 11:15:19 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 13:22:22 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 13:22:22 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 13:22:22 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 13:22:23 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 13:22:23 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 13:22:23 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 13:22:23 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 13:22:23 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 13:22:23 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 13:22:23 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 13:22:23 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 13:22:23 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 13:22:23 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 13:22:23 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 13:22:23 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 13:22:23 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 13:22:23 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 13:22:23 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 13:22:23 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 13:22:23 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 13:22:23 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 13:22:23 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 13:22:23 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 13:22:23 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 13:22:23 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 13:22:23 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 13:22:23 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 13:22:23 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 13:22:23 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 13:22:23 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 13:22:23 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 13:22:23 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 13:22:23 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 13:22:23 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 13:22:24 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.errorfactory.InvalidDocumentContent: An error occurred (InvalidDocumentContent) when calling the CreateDocument operation: Plugin aws:runPowerShellScript is not allowed for Policy document
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Plugin aws:runPowerShellScript is not allowed for Policy document'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Plugin aws:runPowerShellScript is not allowed for Policy document'
+[31m[2023-08-31 13:22:24 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Plugin aws:runPowerShellScript is not allowed for Policy document'
+[36m[2023-08-31 13:22:24 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 13:22:24 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 13:22:24 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 13:22:24 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 13:22:24 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 13:22:24 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 13:22:24 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 13:22:24 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 13:22:24 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 13:22:24 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 13:23:19 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 13:23:19 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 13:23:19 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 13:23:19 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 13:23:19 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 13:23:19 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 13:23:19 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 13:23:19 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 13:23:19 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 13:23:19 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 13:23:19 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 13:23:19 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 13:23:19 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 13:23:19 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 13:23:19 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 13:23:19 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 13:23:19 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 13:23:19 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 13:23:19 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 13:23:19 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 13:23:19 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 13:23:19 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 13:23:19 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 13:23:19 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 13:23:19 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 13:23:19 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 13:23:19 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 13:23:19 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 13:23:19 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 13:23:19 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 13:23:19 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 13:23:19 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 13:23:19 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 13:23:19 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 13:23:20 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the CreateDocument operation: 1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+[31m[2023-08-31 13:23:20 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '1 validation error detected: Value at 'documentType' failed to satisfy constraint: Member is not a valid documentType'
+[36m[2023-08-31 13:23:20 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 13:23:20 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 13:23:20 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 13:23:20 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 13:23:20 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 13:23:20 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 13:23:20 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 13:23:20 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 13:23:20 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 13:23:20 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 13:23:51 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 13:23:51 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 13:23:51 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 13:23:51 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 13:23:51 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 13:23:51 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 13:23:51 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 13:23:51 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 13:23:51 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 13:23:51 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 13:23:51 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 13:23:51 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 13:23:51 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 13:23:51 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 13:23:51 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 13:23:51 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 13:23:51 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 13:23:51 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 13:23:51 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 13:23:51 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 13:23:51 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 13:23:51 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 13:23:51 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 13:23:51 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 13:23:51 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 13:23:51 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 13:23:51 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 13:23:51 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 13:23:51 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 13:23:51 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 13:23:51 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 13:23:51 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 13:23:51 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 13:23:51 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 13:23:53 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.errorfactory.InvalidDocumentContent: An error occurred (InvalidDocumentContent) when calling the CreateDocument operation: 2.2 is not a valid schema version for Automation document type
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '2.2 is not a valid schema version for Automation document type'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '2.2 is not a valid schema version for Automation document type'
+[31m[2023-08-31 13:23:53 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '2.2 is not a valid schema version for Automation document type'
+[36m[2023-08-31 13:23:53 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 13:23:53 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 13:23:53 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 13:23:53 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 13:23:53 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 13:23:53 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 13:23:53 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 13:23:53 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 13:23:53 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 13:23:53 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 13:24:56 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 13:24:56 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 13:24:56 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 13:24:56 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 13:24:56 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 13:24:56 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 13:24:56 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 13:24:56 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 13:24:56 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 13:24:56 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 13:24:56 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 13:24:56 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 13:24:56 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 13:24:56 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 13:24:56 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 13:24:56 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 13:24:56 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 13:24:56 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 13:24:56 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 13:24:56 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 13:24:56 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 13:24:56 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 13:24:56 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 13:24:56 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 13:24:56 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 13:24:56 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 13:24:56 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 13:24:56 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 13:24:56 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 13:24:56 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 13:24:56 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 13:24:56 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 13:24:56 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 13:24:56 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 13:24:57 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.errorfactory.InvalidDocumentContent: An error occurred (InvalidDocumentContent) when calling the CreateDocument operation: 2.2 is not a valid schema version for Automation document type
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '2.2 is not a valid schema version for Automation document type'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '2.2 is not a valid schema version for Automation document type'
+[31m[2023-08-31 13:24:57 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '2.2 is not a valid schema version for Automation document type'
+[36m[2023-08-31 13:24:57 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 13:24:57 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 13:24:57 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 13:24:57 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 13:24:57 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 13:24:57 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 13:24:57 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 13:24:57 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 13:24:57 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 13:24:57 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 13:26:02 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 13:26:02 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 13:26:02 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 13:26:02 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 13:26:02 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 13:26:02 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 13:26:02 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 13:26:02 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 13:26:02 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 13:26:02 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 13:26:02 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 13:26:02 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 13:26:02 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 13:26:02 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 13:26:02 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 13:26:02 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 13:26:02 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 13:26:02 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 13:26:02 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 13:26:02 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 13:26:02 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 13:26:02 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 13:26:02 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 13:26:02 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 13:26:02 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 13:26:02 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 13:26:02 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 13:26:02 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 13:26:02 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 13:26:02 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 13:26:02 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 13:26:02 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 13:26:02 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 13:26:02 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 13:26:04 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.errorfactory.InvalidDocumentContent: An error occurred (InvalidDocumentContent) when calling the CreateDocument operation: Unknown action: aws:runShellScript
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Unknown action: aws:runShellScript'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Unknown action: aws:runShellScript'
+[31m[2023-08-31 13:26:04 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Unknown action: aws:runShellScript'
+[36m[2023-08-31 13:26:04 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 13:26:04 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 13:26:04 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 13:26:04 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 13:26:04 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 13:26:04 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 13:26:04 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 13:26:04 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 13:26:04 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 13:26:04 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 13:26:54 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 13:26:54 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 13:26:54 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 13:26:54 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 13:26:54 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 13:26:54 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 13:26:54 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 13:26:54 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 13:26:54 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 13:26:54 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 13:26:54 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 13:26:54 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 13:26:54 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 13:26:54 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 13:26:54 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 13:26:54 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 13:26:54 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 13:26:54 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 13:26:54 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 13:26:54 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 13:26:54 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 13:26:54 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 13:26:54 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 13:26:54 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 13:26:54 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 13:26:54 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 13:26:54 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 13:26:54 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 13:26:54 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 13:26:54 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 13:26:54 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 13:26:54 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 13:26:54 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 13:26:54 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 13:26:55 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.errorfactory.InvalidDocumentContent: An error occurred (InvalidDocumentContent) when calling the CreateDocument operation: Unknown action: aws:runPowerShellScript
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Unknown action: aws:runPowerShellScript'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Unknown action: aws:runPowerShellScript'
+[31m[2023-08-31 13:26:55 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': 'Unknown action: aws:runPowerShellScript'
+[36m[2023-08-31 13:26:55 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 13:26:55 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 13:26:55 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 13:26:55 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 13:26:55 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 13:26:55 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 13:26:55 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 13:26:55 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 13:26:55 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 13:26:55 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 13:27:30 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 13:27:30 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 13:27:30 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 13:27:30 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 13:27:30 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 13:27:30 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 13:27:30 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 13:27:30 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 13:27:30 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 13:27:30 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 13:27:30 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 13:27:30 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 13:27:30 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 13:27:30 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 13:27:30 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 13:27:30 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 13:27:30 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 13:27:30 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 13:27:30 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 13:27:30 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 13:27:30 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 13:27:30 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 13:27:30 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 13:27:30 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 13:27:30 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 13:27:30 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 13:27:30 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 13:27:30 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 13:27:30 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 13:27:30 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 13:27:30 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 13:27:30 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 13:27:30 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 13:27:30 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 13:27:31 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.errorfactory.InvalidDocumentContent: An error occurred (InvalidDocumentContent) when calling the CreateDocument operation: 2.0 is not a valid schema version for Automation document type
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '2.0 is not a valid schema version for Automation document type'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '2.0 is not a valid schema version for Automation document type'
+[31m[2023-08-31 13:27:31 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '2.0 is not a valid schema version for Automation document type'
+[36m[2023-08-31 13:27:31 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 13:27:31 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 13:27:31 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 13:27:31 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 13:27:31 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 13:27:31 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 13:27:31 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 13:27:31 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 13:27:31 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 13:27:31 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 13:27:46 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 13:27:46 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 13:27:46 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 13:27:46 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 13:27:46 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 13:27:46 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 13:27:46 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 13:27:46 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 13:27:46 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 13:27:46 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 13:27:46 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 13:27:46 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 13:27:46 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 13:27:46 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 13:27:46 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 13:27:46 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 13:27:46 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 13:27:46 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 13:27:46 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 13:27:46 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 13:27:46 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 13:27:46 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 13:27:46 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 13:27:46 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 13:27:46 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 13:27:46 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 13:27:46 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 13:27:46 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 13:27:46 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 13:27:46 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 13:27:46 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 13:27:46 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 13:27:46 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 13:27:46 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 13:27:47 DEBUG] [activity:294][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 39, in create_document
+        return client.create_document(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 530, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/botocore/client.py", line 960, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.errorfactory.InvalidDocumentContent: An error occurred (InvalidDocumentContent) when calling the CreateDocument operation: 2.2 is not a valid schema version for Automation document type
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '2.2 is not a valid schema version for Automation document type'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/activity.py", line 287, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py", line 47, in create_document
+        raise ActivityFailed(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '2.2 is not a valid schema version for Automation document type'
+[31m[2023-08-31 13:27:47 ERROR] [activity:245][39m   => failed: chaoslib.exceptions.ActivityFailed: Failed to create document 'chaos-ssm-doc': '2.2 is not a valid schema version for Automation document type'
+[36m[2023-08-31 13:27:47 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 13:27:47 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 13:27:47 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 13:27:47 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 13:27:47 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 13:27:47 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 13:27:47 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 13:27:47 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 13:27:47 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 13:27:47 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 13:29:37 DEBUG] [cli:114][39m ###############################################################################
+[36m[2023-08-31 13:29:37 DEBUG] [cli:115][39m Running command 'run'
+[36m[2023-08-31 13:29:37 DEBUG] [cli:119][39m Using settings file '/Users/collinsorighose/.chaostoolkit/settings.yaml'
+[36m[2023-08-31 13:29:37 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/collinsorighose/.chaostoolkit/settings.yaml'.
+[36m[2023-08-31 13:29:37 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 13:29:37 DEBUG] [__init__:450][39m No controls to apply on 'loader'
+[36m[2023-08-31 13:29:37 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 13:29:37 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2023-08-31 13:29:37 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2023-08-31 13:29:37 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 13:29:37 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 13:29:37 DEBUG] [secret:103][39m Done loading secrets
+[32m[2023-08-31 13:29:38 INFO] [experiment:109][39m Experiment looks valid
+[36m[2023-08-31 13:29:38 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2023-08-31 13:29:38 DEBUG] [cli:314][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2023-08-31 13:29:38 DEBUG] [caching:24][39m Building activity cache...
+[36m[2023-08-31 13:29:38 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2023-08-31 13:29:38 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2023-08-31 13:29:38 DEBUG] [secret:78][39m Loading secrets...
+[36m[2023-08-31 13:29:38 DEBUG] [secret:103][39m Done loading secrets
+[36m[2023-08-31 13:29:38 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2023-08-31 13:29:38 INFO] [run:369][39m Running experiment: create SSM document
+[36m[2023-08-31 13:29:38 DEBUG] [__init__:64][39m Initializing controls
+[32m[2023-08-31 13:29:38 INFO] [run:396][39m Steady-state strategy: default
+[32m[2023-08-31 13:29:38 INFO] [run:400][39m Rollbacks strategy: default
+[32m[2023-08-31 13:29:38 INFO] [run:408][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2023-08-31 13:29:38 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[32m[2023-08-31 13:29:38 INFO] [run:684][39m Playing your experiment's method now...
+[36m[2023-08-31 13:29:38 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[36m[2023-08-31 13:29:38 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[32m[2023-08-31 13:29:38 INFO] [activity:215][39m Action: create-document
+[36m[2023-08-31 13:29:38 DEBUG] [python:33][39m Activity 'create-document' loaded from '/Users/collinsorighose/opt/anaconda3/envs/demo/lib/python3.11/site-packages/chaosaws/ssm/actions.py'
+[36m[2023-08-31 13:29:38 DEBUG] [__init__:76][39m Using AWS region 'eu-west-2'
+[36m[2023-08-31 13:29:38 DEBUG] [__init__:85][39m Client will be using profile 'default' from boto3 session
+[36m[2023-08-31 13:29:39 DEBUG] [activity:237][39m   => succeeded with '{'DocumentDescription': {'Hash': '95d2eda147c9934aa989bd5e495be6b22ed1e5a581e2d6a907aee2e5f3b8ec7e', 'HashType': 'Sha256', 'Name': 'chaos-ssm-doc', 'VersionName': '1', 'Owner': '684361860346', 'CreatedDate': datetime.datetime(2023, 8, 31, 13, 29, 38, 998000, tzinfo=tzlocal()), 'Status': 'Creating', 'DocumentVersion': '1', 'Description': 'Example document', 'Parameters': [{'Name': 'Message', 'Type': 'String', 'Description': 'Example parameter', 'DefaultValue': 'Hello World'}], 'PlatformTypes': ['Windows', 'Linux', 'MacOS'], 'DocumentType': 'Command', 'SchemaVersion': '2.2', 'LatestVersion': '1', 'DefaultVersion': '1', 'DocumentFormat': 'JSON', 'Tags': []}, 'ResponseMetadata': {'RequestId': '39febc6b-25da-4be4-ab21-744d712b4577', 'HTTPStatusCode': 200, 'HTTPHeaders': {'server': 'Server', 'date': 'Thu, 31 Aug 2023 12:29:39 GMT', 'content-type': 'application/x-amz-json-1.1', 'content-length': '620', 'connection': 'keep-alive', 'x-amzn-requestid': '39febc6b-25da-4be4-ab21-744d712b4577'}, 'RetryAttempts': 0}}'
+[36m[2023-08-31 13:29:39 DEBUG] [__init__:450][39m No controls to apply on 'activity'
+[36m[2023-08-31 13:29:39 DEBUG] [__init__:450][39m No controls to apply on 'method'
+[32m[2023-08-31 13:29:39 INFO] [run:964][39m Let's rollback...
+[36m[2023-08-31 13:29:39 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 13:29:39 INFO] [rollback:31][39m No declared rollbacks, let's move on.
+[36m[2023-08-31 13:29:39 DEBUG] [__init__:450][39m No controls to apply on 'rollback'
+[32m[2023-08-31 13:29:39 INFO] [run:515][39m Experiment ended with status: completed
+[36m[2023-08-31 13:29:39 DEBUG] [__init__:450][39m No controls to apply on 'experiment'
+[36m[2023-08-31 13:29:39 DEBUG] [__init__:103][39m Cleaning up controls
+[36m[2023-08-31 13:29:39 DEBUG] [caching:42][39m Clearing activities cache
