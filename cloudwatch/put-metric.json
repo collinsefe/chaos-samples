@@ -1,0 +1,26 @@
+{
+    "title": "disable-cloudwatch-rule",
+    "description": "chaos toolkit is used to disable a cloudwatch rule",
+    "tags": [],
+    "steady-state-hypothesis": {
+        "title": "Cloudwatch rule exists?",
+        "probes": []
+    },
+    "configuration": {
+        "aws_region": "eu-west-2",
+        "aws_profile_name": "default"
+        },
+  "method": [
+    {
+      "name": "disable-rule",
+      "type": "action",
+      "provider": {
+        "type": "python",
+        "module": "chaosaws.cloudwatch.actions",
+        "func": "disable_rule",
+        "arguments": {
+          "rule_name": "chaos-rule"
+        }
+      }
+    }]
+}
