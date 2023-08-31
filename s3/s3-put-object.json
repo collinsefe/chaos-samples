@@ -1,0 +1,27 @@
+{
+    "title": "create-a-policy",
+    "description": "chaos toolkit is used to create an IAM policy",
+    "tags": [],
+    "steady-state-hypothesis": {
+        "title": "IAM policies in approved state",
+        "probes": []
+    },
+    "configuration": {
+        "aws_region": "eu-west-2",
+        "aws_profile_name": "default"
+        },
+  "method": [
+  {
+  "name": "delete-object",
+  "type": "action",
+  "provider": {
+    "type": "python",
+    "module": "chaosaws.s3.actions",
+    "func": "delete_object",
+    "arguments": {
+      "bucket_name": "chaos-test-bucket-001",
+      "object_key": "chaos-folder/image.png"
+    }
+  }
+}]
+}

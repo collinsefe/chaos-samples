@@ -1,0 +1,27 @@
+{
+    "title": "delete-s3-object",
+    "description": "chaos toolkit is used delete an Object from S3",
+    "tags": [],
+    "steady-state-hypothesis": {
+        "title": "S3 bucket exists in account",
+        "probes": []
+    },
+    "configuration": {
+        "aws_region": "eu-west-2",
+        "aws_profile_name": "default"
+        },
+  "method": [
+  {
+  "name": "delete-object",
+  "type": "action",
+  "provider": {
+    "type": "python",
+    "module": "chaosaws.s3.actions",
+    "func": "delete_object",
+    "arguments": {
+      "bucket_name": "chaos-test-bucket-001",
+      "object_key": "chaos-folder/image.png"
+    }
+  }
+}]
+}
