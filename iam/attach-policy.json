@@ -19,7 +19,7 @@
                         "module": "chaosaws.iam.actions",
                         "func": "attach_role_policy",
                         "arguments": {
-                        "arn": "arn:aws:iam::684361860346:policy/corighose/collinsefe/newer-chaos-policy-for-collins",
+                        "arn": "arn:aws:iam::*",
                         "role_name": "chas-ec2-role"
                         }
                         }
